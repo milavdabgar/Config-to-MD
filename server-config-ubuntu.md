@@ -1,5 +1,5 @@
 # Server Configuration Documentation
-Generated on: 2024-11-03 12:08:11
+Generated on: 2024-11-03 12:40:59
 
 ## Table of Contents
 
@@ -37,9 +37,7 @@ Generated on: 2024-11-03 12:08:11
 ## Default
 Source: `/etc/nginx/sites-available/default`
 
-Edit Source: `sudo nano /etc/nginx/sites-available/default`
-
-```plaintext
+```nginx
 
 ##
 # You should look at the following URL's in order to grasp a solid understanding
@@ -197,9 +195,7 @@ server {
 ## Planetmilav Com
 Source: `/etc/nginx/sites-available/planetmilav.com`
 
-Edit Source: `sudo nano /etc/nginx/sites-available/planetmilav.com`
-
-```plaintext
+```nginx
 # Upstream to abstract backend connection(s) for php
 upstream php {
     server unix:/run/php/php-fpm.sock;
@@ -272,9 +268,7 @@ server {
 ## Portfolio Planetmilav Com
 Source: `/etc/nginx/sites-available/portfolio.planetmilav.com`
 
-Edit Source: `sudo nano /etc/nginx/sites-available/portfolio.planetmilav.com`
-
-```plaintext
+```nginx
 server {
     server_name portfolio.planetmilav.com;
     root /var/www/portfolio.planetmilav.com;
@@ -308,9 +302,7 @@ server {
 ## Gpplmsv1 Planetmilav Com
 Source: `/etc/nginx/sites-available/gpplmsv1.planetmilav.com`
 
-Edit Source: `sudo nano /etc/nginx/sites-available/gpplmsv1.planetmilav.com`
-
-```plaintext
+```nginx
 server {
     server_name gpplmsv1.planetmilav.com; # Replace with your domain
 
@@ -338,9 +330,7 @@ server {
 ## Texeg Planetmilav Com
 Source: `/etc/nginx/sites-available/texeg.planetmilav.com`
 
-Edit Source: `sudo nano /etc/nginx/sites-available/texeg.planetmilav.com`
-
-```plaintext
+```nginx
 server {
     server_name texeg.planetmilav.com;
     root /var/www/texeg.planetmilav.com;
@@ -403,9 +393,7 @@ server {
 ## Roundcube
 Source: `/etc/nginx/sites-available/roundcube`
 
-Edit Source: `sudo nano /etc/nginx/sites-available/roundcube`
-
-```plaintext
+```nginx
 server {
     server_name roundcube.planetmilav.com;
     root /usr/share/roundcube;
@@ -456,9 +444,7 @@ server {
 ## Nextcloud
 Source: `/etc/nginx/sites-available/nextcloud`
 
-Edit Source: `sudo nano /etc/nginx/sites-available/nextcloud`
-
-```plaintext
+```nginx
 server {
     server_name nextcloud.planetmilav.com;
     root /usr/share/nextcloud;
@@ -489,9 +475,7 @@ server {
 ## Postfixadmin Planetmilav Com
 Source: `/etc/nginx/sites-available/postfixadmin.planetmilav.com`
 
-Edit Source: `sudo nano /etc/nginx/sites-available/postfixadmin.planetmilav.com`
-
-```ini
+```nginx
 server {
     server_name postfixadmin.planetmilav.com;
     root /usr/share/postfixadmin/public/;
@@ -533,9 +517,7 @@ server {
 ## Main Cf
 Source: `/etc/postfix/main.cf`
 
-Edit Source: `sudo nano /etc/postfix/main.cf`
-
-```plaintext
+```ini
 # See /usr/share/postfix/main.cf.dist for a commented, more complete version
 smtpd_banner = $myhostname ESMTP $mail_name (Ubuntu)
 biff = no
@@ -599,9 +581,7 @@ cyrus_sasl_config_path = /etc/postfix/sasl
 ## Master Cf
 Source: `/etc/postfix/master.cf`
 
-Edit Source: `sudo nano /etc/postfix/master.cf`
-
-```plaintext
+```ini
 #
 # Postfix master process configuration file.  For details on the format
 # of the file, see the master(5) manual page (command: "man 5 master" or
@@ -744,8 +724,6 @@ mailman   unix  -       n       n       -       -       pipe
 ## Mysql-Virtual-Mailbox-Domains Cf
 Source: `/etc/postfix/mysql-virtual-mailbox-domains.cf`
 
-Edit Source: `sudo nano /etc/postfix/mysql-virtual-mailbox-domains.cf`
-
 ```ini
 user = postfixadmin
 password = seagate
@@ -757,8 +735,6 @@ query = SELECT domain FROM domain WHERE domain='%s' AND active = '1'
 
 ## Mysql-Virtual-Mailbox-Maps Cf
 Source: `/etc/postfix/mysql-virtual-mailbox-maps.cf`
-
-Edit Source: `sudo nano /etc/postfix/mysql-virtual-mailbox-maps.cf`
 
 ```ini
 user = postfixadmin
@@ -772,8 +748,6 @@ query = SELECT maildir FROM mailbox WHERE username='%s' AND active = '1'
 ## Mysql-Virtual-Alias-Maps Cf
 Source: `/etc/postfix/mysql-virtual-alias-maps.cf`
 
-Edit Source: `sudo nano /etc/postfix/mysql-virtual-alias-maps.cf`
-
 ```ini
 user = postfixadmin
 password = seagate
@@ -785,8 +759,6 @@ query = SELECT goto FROM alias WHERE address='%s' AND active = '1'
 
 ## 10-Auth Conf
 Source: `/etc/dovecot/conf.d/10-auth.conf`
-
-Edit Source: `sudo nano /etc/dovecot/conf.d/10-auth.conf`
 
 ```ini
 ##
@@ -923,8 +895,6 @@ auth_mechanisms = plain login
 
 ## 10-Mail Conf
 Source: `/etc/dovecot/conf.d/10-mail.conf`
-
-Edit Source: `sudo nano /etc/dovecot/conf.d/10-mail.conf`
 
 ```ini
 ##
@@ -1359,8 +1329,6 @@ protocol !indexer-worker {
 ## 10-Master Conf
 Source: `/etc/dovecot/conf.d/10-master.conf`
 
-Edit Source: `sudo nano /etc/dovecot/conf.d/10-master.conf`
-
 ```ini
 #default_process_limit = 100
 #default_client_limit = 1000
@@ -1553,8 +1521,6 @@ service dict {
 ## 10-Ssl Conf
 Source: `/etc/dovecot/conf.d/10-ssl.conf`
 
-Edit Source: `sudo nano /etc/dovecot/conf.d/10-ssl.conf`
-
 ```ini
 ##
 ## SSL settings
@@ -1647,25 +1613,129 @@ ssl_dh = </usr/share/dovecot/dh.pem
 ## Config Inc Php
 Source: `/etc/roundcube/config.inc.php`
 
-Edit Source: `sudo nano /etc/roundcube/config.inc.php`
-
 ```php
-Error reading file /etc/roundcube/config.inc.php: [Errno 13] Permission denied: '/etc/roundcube/config.inc.php'
+ 
+<?php
+
+/*
+ +-----------------------------------------------------------------------+
+ | Local configuration for the Roundcube Webmail installation.           |
+ |                                                                       |
+ | This is a sample configuration file only containing the minimum       |
+ | setup required for a functional installation. Copy more options       |
+ | from defaults.inc.php to this file to override the defaults.          |
+ |                                                                       |
+ | This file is part of the Roundcube Webmail client                     |
+ | Copyright (C) The Roundcube Dev Team                                  |
+ |                                                                       |
+ | Licensed under the GNU General Public License version 3 or            |
+ | any later version with exceptions for skins & plugins.                |
+ | See the README file for a full license statement.                     |
+ +-----------------------------------------------------------------------+
+*/
+
+$config = [];
+
+// Do not set db_dsnw here, use dpkg-reconfigure roundcube-core to configure database!
+include_once("/etc/roundcube/debian-db-roundcube.php");
+
+// The IMAP host chosen to perform the log-in.
+// Leave blank to show a textbox at login, give a list of hosts
+// to display a pulldown menu or set one host as string.
+// Enter hostname with prefix ssl:// to use Implicit TLS, or use
+// prefix tls:// to use STARTTLS.
+// Supported replacement variables:
+// %n - hostname ($_SERVER['SERVER_NAME'])
+// %t - hostname without the first part
+// %d - domain (http hostname $_SERVER['HTTP_HOST'] without the first part)
+// %s - domain name after the '@' from e-mail address provided at login screen
+// For example %n = mail.domain.tld, %t = domain.tld
+// $config['default_host'] = '';
+$config['default_host'] = 'ssl://mail.planetmilav.com';
+// SMTP server host (for sending mails).
+// Enter hostname with prefix ssl:// to use Implicit TLS, or use
+// prefix tls:// to use STARTTLS.
+// Supported replacement variables:
+// %h - user's IMAP hostname
+// %n - hostname ($_SERVER['SERVER_NAME'])
+// %t - hostname without the first part
+// %d - domain (http hostname $_SERVER['HTTP_HOST'] without the first part)
+// %z - IMAP domain (IMAP hostname without the first part)
+// For example %n = mail.domain.tld, %t = domain.tld
+// To specify different SMTP servers for different IMAP hosts provide an array
+// of IMAP host (no prefix or port) and SMTP server e.g. ['imap.example.com' => 'smtp.example.net']
+// $config['smtp_server'] = 'localhost';
+$config['smtp_server'] = 'tls://mail.planetmilav.com';
+// SMTP port. Use 25 for cleartext, 465 for Implicit TLS, or 587 for STARTTLS (default)
+$config['smtp_port'] = 587;
+
+// SMTP username (if required) if you use %u as the username Roundcube
+// will use the current username for login
+$config['smtp_user'] = '%u';
+
+// SMTP password (if required) if you use %p as the password Roundcube
+// will use the current user's password for login
+$config['smtp_pass'] = '%p';
+
+// provide an URL where a user can get support for this Roundcube installation
+// PLEASE DO NOT LINK TO THE ROUNDCUBE.NET WEBSITE HERE!
+$config['support_url'] = '';
+
+// Name your service. This is displayed on the login screen and in the window title
+$config['product_name'] = 'Roundcube Webmail';
+
+// This key is used to encrypt the users imap password which is stored
+// in the session record. For the default cipher method it must be
+// exactly 24 characters long.
+// YOUR KEY MUST BE DIFFERENT THAN THE SAMPLE VALUE FOR SECURITY REASONS
+// $config['des_key'] = 'PJLkaU1H0129QmoK5KvWeoan';
+$config['des_key'] = 'rcmail-!24ByteDESkey*Str';
+
+// List of active plugins (in plugins/ directory)
+// Debian: install roundcube-plugins first to have any
+$config['plugins'] = [
+    // 'archive',
+    // 'zipdownload',
+];
+
+// skin name: folder from skins/
+$config['skin'] = 'elastic';
+
+// Disable spellchecking
+// Debian: spellchecking needs additional packages to be installed, or calling external APIs
+//         see defaults.inc.php for additional informations
+$config['enable_spellcheck'] = false;
+
 ```
 
 ## Debian-Db Php
 Source: `/etc/roundcube/debian-db.php`
 
-Edit Source: `sudo nano /etc/roundcube/debian-db.php`
-
 ```php
-Error reading file /etc/roundcube/debian-db.php: [Errno 13] Permission denied: '/etc/roundcube/debian-db.php'
+ 
+<?php
+##
+## database access settings in php format
+## automatically generated from /etc/dbconfig-common/roundcube.conf
+## by /usr/sbin/dbconfig-generate-include
+##
+## by default this file is managed via ucf, so you shouldn't have to
+## worry about manual changes being silently discarded.  *however*,
+## you'll probably also want to edit the configuration file mentioned
+## above too.
+##
+$dbuser='roundcube';
+$dbpass='seagate';
+$basepath='';
+$dbname='roundcube';
+$dbserver='localhost';
+$dbport='3306';
+$dbtype='mysql';
+
 ```
 
 ## Config Inc Php
 Source: `/etc/postfixadmin/config.inc.php`
-
-Edit Source: `sudo nano /etc/postfixadmin/config.inc.php`
 
 ```php
 <?php
@@ -2394,16 +2464,31 @@ if (file_exists(dirname(__FILE__) . '/config.local.php')) {
 ## Dbconfig Inc Php
 Source: `/etc/postfixadmin/dbconfig.inc.php`
 
-Edit Source: `sudo nano /etc/postfixadmin/dbconfig.inc.php`
-
 ```php
-Error reading file /etc/postfixadmin/dbconfig.inc.php: [Errno 13] Permission denied: '/etc/postfixadmin/dbconfig.inc.php'
+ 
+<?php
+##
+## database access settings in php format
+## automatically generated from /etc/dbconfig-common/postfixadmin.conf
+## by /usr/sbin/dbconfig-generate-include
+##
+## by default this file is managed via ucf, so you shouldn't have to
+## worry about manual changes being silently discarded.  *however*,
+## you'll probably also want to edit the configuration file mentioned
+## above too.
+##
+$dbuser='postfixadmin';
+$dbpass='seagate';
+$basepath='';
+$dbname='postfixadmin';
+$dbserver='localhost';
+$dbport='3306';
+$dbtype='mysql';
+
 ```
 
 ## Opendkim Conf
 Source: `/etc/opendkim.conf`
-
-Edit Source: `sudo nano /etc/opendkim.conf`
 
 ```ini
 # This is a basic configuration for signing and verifying. It can easily be
@@ -2470,8 +2555,6 @@ TrustAnchorFile		/usr/share/dns/root.key
 ## Keytable
 Source: `/etc/opendkim/KeyTable`
 
-Edit Source: `sudo nano /etc/opendkim/KeyTable`
-
 ```plaintext
 mail._domainkey.planetmilav.com planetmilav.com:mail:/etc/opendkim/keys/planetmilav.com/mail.private
 
@@ -2480,8 +2563,6 @@ mail._domainkey.planetmilav.com planetmilav.com:mail:/etc/opendkim/keys/planetmi
 ## Signingtable
 Source: `/etc/opendkim/SigningTable`
 
-Edit Source: `sudo nano /etc/opendkim/SigningTable`
-
 ```plaintext
 *@planetmilav.com mail._domainkey.planetmilav.com
 
@@ -2489,8 +2570,6 @@ Edit Source: `sudo nano /etc/opendkim/SigningTable`
 
 ## Trustedhosts
 Source: `/etc/opendkim/TrustedHosts`
-
-Edit Source: `sudo nano /etc/opendkim/TrustedHosts`
 
 ```plaintext
 127.0.0.1
@@ -2501,8 +2580,6 @@ planetmilav.com
 
 ## Smb Conf
 Source: `/etc/samba/smb.conf`
-
-Edit Source: `sudo nano /etc/samba/smb.conf`
 
 ```ini
 #
@@ -2782,16 +2859,38 @@ Edit Source: `sudo nano /etc/samba/smb.conf`
 ## 50-Cloud-Init Yaml
 Source: `/etc/netplan/50-cloud-init.yaml`
 
-Edit Source: `sudo nano /etc/netplan/50-cloud-init.yaml`
-
 ```yaml
-Error reading file /etc/netplan/50-cloud-init.yaml: [Errno 13] Permission denied: '/etc/netplan/50-cloud-init.yaml'
+ 
+# This file is generated from information provided by the datasource.  Changes
+# to it will not persist across an instance reboot.  To disable cloud-init's
+# network configuration capabilities, write a file
+# /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg with the following:
+# network: {config: disabled}
+network:
+    ethernets:
+        eth0:
+            dhcp4: no
+            optional: true
+            addresses:
+              - 192.168.0.70/24
+            routes:
+              - to: default
+                via: 192.168.0.1
+            nameservers:
+              addresses: [192.168.0.1, 8.8.8.8]
+    version: 2
+    wifis:
+      wlan0:
+        dhcp4: true
+        optional: true
+        access-points:
+          "Milav-Tenda":
+            password: "seagate@123"
+
 ```
 
 ## Hosts
 Source: `/etc/hosts`
-
-Edit Source: `sudo nano /etc/hosts`
 
 ```plaintext
 127.0.0.1 localhost

@@ -1,13 +1,86 @@
 import os
 import sys
-from urllib.request import urlopen
-from urllib.parse import urlparse
 from datetime import datetime
+import subprocess
+import pexpect
+from getpass import getpass
 
-def get_code_block_language(filename):
-    """Determine the appropriate code block language based on file extension or name"""
+class SudoReader:
+    def __init__(self, password):
+        self.password = password
+        self._sudo_timestamp_touched = False
+
+    def _ensure_sudo(self):
+        """Ensure sudo timestamp is updated to prevent repeated password prompts"""
+        if not self._sudo_timestamp_touched:
+            try:
+                child = pexpect.spawn('sudo -v')
+                i = child.expect(['password for.*:', pexpect.EOF])
+                if i == 0:
+                    child.sendline(self.password)
+                    child.expect(pexpect.EOF)
+                self._sudo_timestamp_touched = True
+            except Exception as e:
+                print(f"Error establishing sudo session: {str(e)}")
+                return False
+        return True
+
+    def read_file(self, filepath):
+        """Read file content using sudo if necessary"""
+        try:
+            # First try reading normally
+            with open(filepath, 'r', encoding='utf-8') as f:
+                return f.read()
+        except PermissionError:
+            # If permission denied, try using sudo
+            if self._ensure_sudo():
+                try:
+                    cmd = f'sudo cat "{filepath}"'
+                    child = pexpect.spawn(cmd)
+                    i = child.expect(['password for.*:', pexpect.EOF], timeout=2)
+                    if i == 0:
+                        child.sendline(self.password)
+                    content = child.read().decode()
+                    child.close()
+                    return content
+                except Exception as e:
+                    return f"Error reading file {filepath} with sudo: {str(e)}"
+            return f"Error: Could not establish sudo access for {filepath}"
+        except Exception as e:
+            return f"Error reading file {filepath}: {str(e)}"
+
+def get_code_block_language(filepath):
+    """Determine the appropriate code block language based on file path and name"""
+    filename = os.path.basename(filepath)
+    filepath_lower = filepath.lower()
+    filename_lower = filename.lower()
+    
+    # Nginx configurations
+    if 'nginx/sites-available' in filepath_lower or 'nginx/sites-enabled' in filepath_lower:
+        return 'nginx'
+    
+    # Postfix configurations
+    if 'postfix' in filepath_lower and filename_lower.endswith('.cf'):
+        return 'ini'
+    
+    # Check specific paths and files
+    path_language_map = {
+        '/etc/postfix/main.cf': 'ini',
+        '/etc/postfix/master.cf': 'ini',
+        '/etc/dovecot/dovecot.conf': 'ini',
+        '/etc/opendkim.conf': 'ini',
+        '/etc/netplan/50-cloud-init.yaml': 'yaml',
+        '/etc/roundcube/config.inc.php': 'php',
+        '/etc/postfixadmin/config.inc.php': 'php',
+    }
+    
+    if filepath in path_language_map:
+        return path_language_map[filepath]
+        
+    # Check extensions
     extensions = {
-        '.conf': 'ini',  # Most .conf files are INI-style
+        '.conf': 'ini',
+        '.cf': 'ini',
         '.cfg': 'ini',
         '.ini': 'ini',
         '.php': 'php',
@@ -23,22 +96,7 @@ def get_code_block_language(filename):
         '.json': 'json'
     }
     
-    # First check specific config files
-    filename_lower = filename.lower()
-    if any(name in filename_lower for name in ['nginx.conf', 'nginx', 'sites-available', 'sites-enabled']):
-        return 'nginx'
-    if any(name in filename_lower for name in ['apache2', 'httpd']):
-        return 'apache'
-    if 'postfix' in filename_lower:
-        return 'ini'
-    if 'dovecot' in filename_lower:
-        return 'ini'
-    if any(name in filename_lower for name in ['my.cnf', 'mysql']):
-        return 'ini'
-    if any(name in filename_lower for name in ['.service', '.socket']):
-        return 'ini'
-    
-    # Check file extension
+    # Get extension
     _, ext = os.path.splitext(filename)
     return extensions.get(ext.lower(), 'plaintext')
 
@@ -54,15 +112,7 @@ def extract_urls_from_markdown(markdown_file):
                 urls.append(path)
     return urls
 
-def read_content(path):
-    """Read content from file path"""
-    try:
-        with open(path, 'r', encoding='utf-8') as f:
-            return f.read()
-    except Exception as e:
-        return f"Error reading file {path}: {str(e)}"
-
-def create_markdown(markdown_input, output_file):
+def create_markdown(markdown_input, output_file, sudo_reader):
     """Generate markdown documentation from markdown input file containing paths"""
     
     # Extract URLs from markdown
@@ -90,15 +140,14 @@ def create_markdown(markdown_input, output_file):
     # Process each file path
     for path in urls:
         filename = os.path.basename(path)
-        content = read_content(path)
-        language = get_code_block_language(filename)
+        content = sudo_reader.read_file(path)
+        language = get_code_block_language(path)
         
         heading = filename.replace('.', ' ').title()
         
         markdown_content.extend([
             f"## {heading}",
             f"Source: `{path}`\n",
-            f"Edit Source: `sudo nano {path}`\n",
             f"```{language}",
             content,
             "```\n"
@@ -116,5 +165,8 @@ if __name__ == "__main__":
         print("  input.md: Markdown file containing bullet points with file paths")
         print("  output.md: Output file for the generated documentation")
         sys.exit(1)
+
+    # Initialize sudo reader with password
+    sudo_reader = SudoReader('seagate')
     
-    create_markdown(sys.argv[1], sys.argv[2])
+    create_markdown(sys.argv[1], sys.argv[2], sudo_reader)

@@ -1,5 +1,5 @@
 # Server Configuration Guide
-Generated on: 2024-11-03 01:07:17
+Generated on: 2024-11-03 01:29:30
 
 ## Table of Contents
 
@@ -11,7 +11,9 @@ Generated on: 2024-11-03 01:07:17
 ## Rsyncd
 Source: `/etc/rsyncd.conf`
 
-```conf
+Edit Source: sudo nano `/etc/rsyncd.conf`
+
+```ini
 # /etc/rsyncd: configuration file for rsync daemon mode
 
 # See rsyncd.conf man page for more options.
@@ -37,6 +39,8 @@ Source: `/etc/rsyncd.conf`
 
 ## Config.Inc
 Source: `/home/milav/Downloads/config.inc.php`
+
+Edit Source: sudo nano `/home/milav/Downloads/config.inc.php`
 
 ```php
 <?php

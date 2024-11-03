@@ -6,8 +6,40 @@ from datetime import datetime
 
 def get_code_block_language(filename):
     """Determine the appropriate code block language based on file extension or name"""
+    # Convert filename to lowercase for easier matching
+    filename_lower = filename.lower()
+    
+    # First check specific config files
+    if any(name in filename_lower for name in ['nginx.conf', 'nginx', 'sites-available', 'sites-enabled']):
+        return 'nginx'
+    if any(name in filename_lower for name in ['apache2', 'httpd']):
+        return 'apache'
+    if 'php' in filename_lower:
+        return 'php'
+    if any(name in filename_lower for name in ['my.cnf', 'mysql']):
+        return 'ini'
+    if 'postfix' in filename_lower:
+        return 'ini'
+    if 'dovecot' in filename_lower:
+        return 'ini'
+    if 'named.conf' in filename_lower or 'bind' in filename_lower:
+        return 'nginx'  # BIND configs highlight well with nginx
+    if 'sshd_config' in filename_lower:
+        return 'ssh-config'
+    if 'rsync' in filename_lower:
+        return 'ini'
+    if 'supervisord' in filename_lower:
+        return 'ini'
+    if 'fstab' in filename_lower:
+        return 'fstab'
+    if 'crontab' in filename_lower:
+        return 'crontab'
+    
+    # Then check extensions
     extensions = {
-        '.conf': 'conf',
+        '.conf': 'ini',  # Most .conf files are INI-style
+        '.cfg': 'ini',
+        '.ini': 'ini',
         '.nginx': 'nginx',
         '.php': 'php',
         '.py': 'python',
@@ -22,17 +54,9 @@ def get_code_block_language(filename):
         '.json': 'json'
     }
     
-    # Special cases for specific filenames
-    if 'nginx' in filename.lower():
-        return 'nginx'
-    if 'apache' in filename.lower():
-        return 'apache'
-    if 'php' in filename.lower():
-        return 'php'
-    
     # Check file extension
     _, ext = os.path.splitext(filename)
-    return extensions.get(ext.lower(), 'plaintext')
+    return extensions.get(ext.lower(), 'ini')  # Default to INI for unknown config files
 
 def generate_heading(filename):
     """Generate a readable heading from filename"""
@@ -96,6 +120,7 @@ def create_markdown(files_list, output_file):
         markdown_content.extend([
             f"## {heading}",
             f"Source: `{path}`\n",
+            f"Edit Source: sudo nano `{path}`\n",
             f"```{language}",
             content,
             "```\n"

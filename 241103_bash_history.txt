@@ -1,0 +1,573 @@
+    1  sudo nano /etc/netplan/50-cloud-init.yaml 
+    2  sudo netplan apply 
+    3  sudo nano /etc/netplan/50-cloud-init.yaml 
+    4  sudo netplan apply 
+    5  sudo nano /etc/netplan/50-cloud-init.yaml 
+    6  sudo netplan apply 
+    7  sudo nano /etc/netplan/50-cloud-init.yaml 
+    8  sudo netplan apply 
+    9  sudo nano /etc/netplan/50-cloud-init.yaml 
+   10  ssh milav@192.168.0.50
+   11  sudo nano /etc/netplan/50-cloud-init.yaml 
+   12  sudo netplan apply 
+   13  sudo nano /etc/netplan/50-cloud-init.yaml 
+   14  sudo netplan apply 
+   15  sudo nano /etc/netplan/50-cloud-init.yaml 
+   16  sudo netplan apply 
+   17  sudo nano /etc/netplan/50-cloud-init.yaml 
+   18  sudo netplan apply 
+   19  ping 192.168.0.1
+   20  sudo nano /etc/netplan/50-cloud-init.yaml 
+   21  sudo netplan apply 
+   22  sudo nano /etc/netplan/50-cloud-init.yaml 
+   23  sudo netplan apply 
+   24  sudo nano /etc/netplan/50-cloud-init.yaml 
+   25  y
+   26  sudo nano /etc/netplan/50-cloud-init.yaml 
+   27  y
+   28  sudo netplan apply 
+   29  sudo nano /etc/netplan/50-cloud-init.yaml 
+   30  sudo netplan apply 
+   31  sudo raspi-config
+   32  sudo apt install raspi-config
+   33  sudo reboot now
+   34  sudo nano /etc/netplan/50-cloud-init.yaml 
+   35  sudo netplan apply 
+   36  sudo shutdown now
+   37  sudo apt install raspi-config
+   38  raspi-config 
+   39  sudo raspi-config
+   40  sudo nano /etc/netplan/50-cloud-init.yaml
+   41  sudo netplan apply 
+   42  sudo raspi-config
+   43  sudo nano /etc/netplan/50-cloud-init.yaml
+   44  sudo netplan apply 
+   45  ifconfig
+   46  sudo apt update
+   47  ip a
+   48  sudo nano /etc/netplan/50-cloud-init.yaml
+   49  sudo netplan apply 
+   50  sudo nano /etc/netplan/50-cloud-init.yaml
+   51  sudo netplan apply 
+   52  sudo nano /etc/netplan/50-cloud-init.yaml
+   53  nmcli r wifi on
+   54  sudo nano /etc/netplan/50-cloud-init.yaml
+   55  sudo netplan apply 
+   56  ip a
+   57  ssh milav@192.168.0.184
+   58  sudo systemctl status ssh
+   59  sudo systemctl stop ssh
+   60  sudo systemctl status ssh
+   61  sudo systemctl stop ssh
+   62  sudo systemctl enable ssh
+   63  sudo systemctl start ssh
+   64  sudo systemctl status ssh
+   65  ssh milav@192.168.0.184
+   66  sudo systemctl restart ssh
+   67  ssh milav@192.168.0.184
+   68  ls -al
+   69  sudo nano .ssh/known_hosts 
+   70  ssh-keygen 
+   71  sudo systemctl restart ssh
+   72  ssh milav@192.168.0.184
+   73  sudo reboot now
+   74  ssh milav@192.168.0.184
+   75  ls -al
+   76  cd .ssh
+   77  ls -al
+   78  ls
+   79  cd ..
+   80  ls
+   81  sudo apt remove --purge openssh-server 
+   82  sudo rm -rf /etc/ssh/
+   83  sudo rm -rf .ssh/
+   84  ls -al
+   85  sudo systemctl status ssh
+   86  sudo reboot now
+   87  sudo apt install screen
+   88  screen
+   89  sudo apt install openssh-server
+   90  sudo systemctl status ssh
+   91  ssh milav@192.168.0.184
+   92  sudo apt upgrade
+   93  screen -r
+   94  sudo nano /etc/netplan/50-cloud-init.yaml
+   95  sudo netplan apply
+   96  ip a
+   97  sudo shutdown now
+   98  ip a
+   99  ip a
+  100  sudo nano /etc/netplan/50-cloud-init.yaml
+  101  sudo netplan apply
+  102  sudo nano /etc/netplan/50-cloud-init.yaml
+  103  sudo netplan apply
+  104  sudo reboot now
+  105  sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
+  106  ip a
+  107  screen
+  108  sudo reboot now
+  109  ip a
+  110  sudo shutdown now
+  111  ip a
+  112  sudo hostnamectl set-hostname rpi
+  113  ip a
+  114  sudo nano /etc/netplan/50-cloud-init.yaml
+  115  sudo netplan apply 
+  116  sudo nano /etc/hosts
+  117  sudo apt install nginx -y
+  118  sudo systemctl start nginx
+  119  sudo systemctl enable nginx
+  120  sudo apt install mariadb-server mariadb-client -y
+  121  sudo mysql_secure_installation
+  122  sudo mysql -u root -p
+  123  sudo apt install php-fpm php-mysql php-curl php-gd php-xml php-mbstring php-dom php-imagick php-zip -y
+  124  sudo mysql -e "CREATE DATABASE planetmilav_com;"
+  125  sudo mysql -u root -p
+  126  sudo mysql -e "CREATE DATABASE texeg_planetmilav_com;"
+  127  sudo mysql -e "CREATE USER 'wordpress'@'localhost' IDENTIFIED BY 'seagate';"
+  128  sudo mysql -e "GRANT ALL PRIVILEGES ON planetmilav_com.* TO 'wordpress'@'localhost';"
+  129  sudo mysql -e "GRANT ALL PRIVILEGES ON texeg_planetmilav_com.* TO 'wordpress'@'localhost';"
+  130  sudo mysql -e "FLUSH PRIVILEGES;"
+  131  sudo nano /etc/nginx/sites-available/planetmilav
+  132  sudo nano /etc/nginx/sites-available/portfolio.planetmilav.com
+  133  sudo nano /etc/nginx/sites-available/texeg.planetmilav.com
+  134  sudo nano /etc/nginx/sites-available/postfixadmin.planetmilav.com
+  135  sudo nano /etc/nginx/sites-available/roundcube
+  136  sudo nano /etc/nginx/sites-available/nextcloud
+  137  sudo nano /etc/nginx/sites-available/gpplmsv1.planetmilav.com
+  138  sudo cp /etc/nginx/sites-available/planetmilav /etc/nginx/sites-available/planetmilav.com
+  139  sudo rm /etc/nginx/sites-available/planetmilav
+  140  sudo ln -s /etc/nginx/sites-available/gpplmsv1.planetmilav.com /etc/nginx/sites-enabled/
+  141  sudo ln -s /etc/nginx/sites-available/planetmilav.com /etc/nginx/sites-enabled/
+  142  sudo ln -s /etc/nginx/sites-available/texeg.planetmilav.com /etc/nginx/sites-enabled/
+  143  sudo ln -s /etc/nginx/sites-available/portfolio.planetmilav.com /etc/nginx/sites-enabled/
+  144  sudo ln -s /etc/nginx/sites-available/postfixadmin.planetmilav.com /etc/nginx/sites-enabled/
+  145  sudo ln -s /etc/nginx/sites-available/roundcube /etc/nginx/sites-enabled/
+  146  sudo ln -s /etc/nginx/sites-available/nextcloud /etc/nginx/sites-enabled/
+  147  sudo nano /etc/nginx/sites-available/default 
+  148  sudo nginx -t
+  149  sudo certbot --nginx -d planetmilav.com -d www.planetmilav.com -d gpplmsv1.planetmilav.com -d mail.planetmilav.com -d portfolio.planetmilav.com -d postfixadmin.planetmilav.com -d texeg.planetmilav.com -d roundcube.planetmilav.com -d nextcloud.planetmilav.com
+  150  sudo apt install certbot 
+  151  sudo certbot --nginx -d planetmilav.com -d www.planetmilav.com -d gpplmsv1.planetmilav.com -d mail.planetmilav.com -d portfolio.planetmilav.com -d postfixadmin.planetmilav.com -d texeg.planetmilav.com -d roundcube.planetmilav.com -d nextcloud.planetmilav.com
+  152  sudo apt remove certbot
+  153  sudo apt update
+  154  sudo apt install python3-certbot-nginx
+  155  sudo systemctl restart nginx
+  156  sudo certbot --nginx -d planetmilav.com -d www.planetmilav.com -d gpplmsv1.planetmilav.com -d mail.planetmilav.com -d portfolio.planetmilav.com -d postfixadmin.planetmilav.com -d texeg.planetmilav.com -d roundcube.planetmilav.com -d nextcloud.planetmilav.com
+  157  sudo nano /etc/nginx/sites-available/planetmilav
+  158  sudo nano /etc/nginx/sites-available/planetmilav.com 
+  159  sudo nano /etc/nginx/sites-available/texeg.planetmilav.com
+  160  sudo nano /etc/nginx/sites-available/portfolio.planetmilav.com
+  161  sudo nano /etc/nginx/sites-available/postfixadmin.planetmilav.com
+  162  sudo nano /etc/nginx/sites-available/roundcube 
+  163  sudo nano /etc/nginx/sites-available/nextcloud 
+  164  sudo systemctl restart nginx
+  165  sudo nginx -t
+  166  sudo nano /etc/nginx/sites-available/gpplmsv1.planetmilav.com 
+  167  sudo nginx -t
+  168  sudo systemctl restart nginx
+  169  sudo nginx -t
+  170  sudo certbot --nginx -d planetmilav.com -d www.planetmilav.com -d gpplmsv1.planetmilav.com -d mail.planetmilav.com -d portfolio.planetmilav.com -d postfixadmin.planetmilav.com -d texeg.planetmilav.com -d roundcube.planetmilav.com -d nextcloud.planetmilav.com
+  171  sudo ufw status
+  172  sudo ufw allow Nginx Full
+  173  sudo ufw allow Nginx
+  174  sudo ufw allow "Nginx Full"
+  175  sudo ufw status
+  176  sudo ufw allow OpenSSH
+  177  sudo ufw allow "Dovecot IMAP"
+  178  sudo ufw allow Samba
+  179  sudo ufw status
+  180  sudo certbot --nginx -d planetmilav.com -d www.planetmilav.com -d gpplmsv1.planetmilav.com -d mail.planetmilav.com -d portfolio.planetmilav.com -d postfixadmin.planetmilav.com -d texeg.planetmilav.com -d roundcube.planetmilav.com -d nextcloud.planetmilav.com
+  181  sudo crontab -e
+  182  crontab -e
+  183  sudo nano /etc/nginx/sites-available/portfolio.planetmilav.com
+  184  sudo wget https://wordpress.org/latest.tar.gz
+  185  sudo tar -xzvf latest.tar.gz
+  186  sudo cp wordpress /var/www/texeg.planetmilav.com
+  187  sudo cp wordpress /var/www/texeg.planetmilav.com -r
+  188  ls
+  189  sudo mv wordpress /var/www/planetmilav.com -r
+  190  sudo cp wordpress /var/www/planetmilav.com -r
+  191  ls 
+  192  sudo rm -rf wordpress/
+  193  sudo rm latest.tar.gz 
+  194  cd /var/www/
+  195  ls
+  196  sudo chown -R www-data:www-data /var/www/planetmilav.com/
+  197  sudo chown -R www-data:www-data /var/www/texeg.planetmilav.com/
+  198  sudo chmod -R 755 /var/www/planetmilav.com/
+  199  sudo chmod -R 755 /var/www/texeg.planetmilav.com/
+  200  ls
+  201  cd ~
+  202  mkdir 
+  203  mkdir code
+  204  cd mkdir
+  205  cd code
+  206  ls
+  207  git clone https://github.com/milavdabgar/milavdabgar.github.io.git
+  208  ls
+  209  sudo cp milavdabgar.github.io /var/www/portfolio.planetmilav.com -r
+  210  git clone https://github.com/milavdabgar/ipEmail.git
+  211  git clone https://github.com/milavdabgar/gppLMSv1.git
+  212  git config --global user.name "Milav Dabgar"
+  213  git config --global user.email "milav.dabgar@gmail.com"
+  214  git clone https://github.com/milavdabgar/ipEmail.git
+  215  ssh-keygen -t ed25519 -C "milav.dabgar@gmail.com"
+  216  cat ~/.ssh/id_ed25519.pub
+  217  git clone git@github.com:milavdabgar/ipEmail.git
+  218  ls
+  219  git clone https://github.com/milavdabgar/gppLMSv1.git
+  220  git@github.com:milavdabgar/gppLMSv1.git
+  221  git clone git@github.com:milavdabgar/gppLMSv1.git
+  222  ls
+  223  sudo apt install php-intl
+  224  sudo nano /etc/netplan/50-cloud-init.yaml 
+  225  sudo netplan apply
+  226  sudo rm /var/www/texeg.planetmilav.com/wp-content/advanced-cache.php
+  227  sudo systemctl restart nginx
+  228  sudo nano /etc/netplan/50-cloud-init.yaml 
+  229  sudo netplan apply
+  230  sudo reboot now
+  231  sudo apt update && sudo apt dist-upgrade -y && sudo apt autoremove -y
+  232  timedatectl
+  233  sudo timedatectl set-timezone Asia/Kolkata
+  234  timedatectl
+  235  locale
+  236  history > 241101_bash_history.txt
+  237  cat 241101_bash_history.txt 
+  238  sudo nano /etc/netplan/50-cloud-init.yaml
+  239  ls code/
+  240  sudo ufw app list
+  241  sudo nano /etc/nginx/sites-available/planetmilav.com
+  242  sudo nano /etc/nginx/sites-available/texeg.planetmilav.com 
+  243  sudo nano /etc/nginx/sites-available/portfolio.planetmilav.com
+  244  sudo nano /etc/nginx/sites-available/postfixadmin.planetmilav.com
+  245  sudo nano /etc/nginx/sites-available/roundcube 
+  246  sudo nano /etc/nginx/sites-available/nextcloud 
+  247  sudo nano /etc/php/8.3/fpm/pool.d/www.conf
+  248  sudo apt install postfix postfix-mysql dovecot-core dovecot-imapd dovecot-lmtpd dovecot-mysql mariadb-server nginx php-fpm php-mysql postfixadmin roundcube roundcube-mysql roundcube-plugins opendkim opendkim-tools
+  249  sudo apt remove --purge postfix postfix-mysql dovecot-core dovecot-imapd dovecot-lmtpd dovecot-mysql postfixadmin roundcube roundcube-mysql roundcube-plugins opendkim opendkim-tools
+  250  sudo reboot now
+  251  sudo apt install postfix postfix-mysql dovecot-core dovecot-imapd dovecot-lmtpd dovecot-mysql mariadb-server nginx php-fpm php-mysql postfixadmin roundcube roundcube-mysql roundcube-plugins opendkim opendkim-tools
+  252  sudo ufw app list
+  253  sudo ufw allow "Dovecot IMAP"
+  254  sudo ufw allow "Dovecot Secure IMAP"
+  255  sudo ufw allow "Postfix"
+  256  sudo ufw allow "Postfix SMTPS"
+  257  sudo ufw allow "Postfix Submission"
+  258  sudo mysql -u root -p
+  259  sudo mysql -e "CREATE DATABASE roundcube;"
+  260  sudo mysql -e "CREATE USER 'roundcube'@'localhost' IDENTIFIED BY 'seagate';"
+  261  sudo mysql -e "GRANT ALL PRIVILEGES ON roundcube.* TO 'roundcube'@'localhost';"
+  262  sudo mysql -e "FLUSH PRIVILEGES;"
+  263  sudo nano /etc/postfixadmin/config.inc.php
+  264  sudo systemctl restart postfix dovecot nginx php8.3-fpm.service 
+  265  sudo nano /etc/postfix/main.cf
+  266  sudo nano /etc/dovecot/dovecot.conf
+  267  sudo nano /etc/dovecot/conf.d/10-ssl.conf
+  268  sudo nano /etc/dovecot/conf.d/10-master.conf
+  269  sudo nano /etc/postfixadmin/dbconfig.inc.php
+  270  sudo nano /etc/postfixadmin/config.inc.php
+  271  sudo systemctl restart postfix dovecot nginx php8.3-fpm.service 
+  272  sudo nano /etc/postfixadmin/config.inc.php
+  273  sudo nano /etc/postfix/mysql-virtual-mailbox-domains.cf
+  274  # sudo nano /etc/postfix/mysql-virtual-mailbox-maps.cf
+  275  sudo nano /etc/postfix/mysql-virtual-mailbox-maps.cf
+  276  sudo nano /etc/postfix/mysql-virtual-alias-maps.cf
+  277  sudo nano /etc/dovecot/conf.d/auth-sql.conf.ext
+  278  sudo nano /etc/dovecot/dovecot-sql.conf.ext
+  279  sudo nano /etc/dovecot/conf.d/10-mail.conf
+  280  sudo nano /etc/dovecot/conf.d/10-auth.conf
+  281  sudo nano /etc/dovecot/conf.d/auth-master.conf.ext
+  282  sudo nano /etc/dovecot/conf.d/auth-system.conf.ext
+  283  sudo systemctl restart postfix dovecot nginx php8.3-fpm.service 
+  284  sudo systemctl restart postfix dovecot nginx php8.3-fpm.service opendkim
+  285  sudo postfix check
+  286  sudo dovecot -n
+  287  sudo mkdir /etc/opendkim/keys/planetmilav.com
+  288  sudo mkdir /etc/opendkim/keys/planetmilav.com -p
+  289  cd /etc/opendkim/keys/planetmilav.com/
+  290  sudo opendkim-genkey -d planetmilav.com -s mail
+  291  sudo chown opendkim:opendkim mail.private
+  292  sudo nano /etc/opendkim.conf
+  293  cd ~
+  294  sudo mkdir /var/spool/postfix/opendkim
+  295  sudo chown opendkim:postfix /var/spool/postfix/opendkim
+  296  sudo opendkim-testkey -d planetmilav.com -s mail -vvv
+  297  sudo opendkim-testkey -d planetmilav.com -s mail
+  298  sudo nano /etc/postfixadmin/config.local.php
+  299  /etc/postfixadmin/dbconfig.inc.php
+  300  sudo nano /etc/postfixadmin/dbconfig.inc.php
+  301  sudo nano /etc/postfixadmin/config.inc.php
+  302  sudo systemctl restart postfix dovecot nginx php8.3-fpm.service opendkim
+  303  sudo nano /etc/postfixadmin/config.inc.php
+  304  sudo systemctl restart postfix dovecot nginx php8.3-fpm.service opendkim
+  305  sudo doveconf | grep userdb
+  306  doveadm auth test admin@planetmilav.com
+  307  sudo groupadd -g 5000 vmail
+  308  sudo useradd -g vmail -u 5000 vmail -d /var/mail
+  309  sudo mkdir -p /var/mail/vhosts
+  310  sudo chown -R vmail:vmail /var/mail/vhosts
+  311  sudo chmod -R 770 /var/mail/vhosts
+  312  sudo postfix check
+  313  sudo postfix status
+  314  telnet localhost 25
+  315  sudo dovecot -n
+  316  sudo systemctl status dovecot
+  317  sudo nano /etc/nginx/sites-available/planetmilav.com 
+  318  sudo nano /etc/postfix/main.cf
+  319  telnet localhost 143
+  320  sudo ufw app list
+  321  sudo ufw status 
+  322  sudo systemctl restart postfix dovecot nginx php8.3-fpm.service opendkim
+  323  sudo systemctl restart postfix dovecot nginx php8.3-fpm.service opendkim ufw
+  324  sudo systemctl status dovecot
+  325  telnet localhost 143
+  326  sudo cat /var/log/mail.log
+  327  sudo journalctl -u dovecot
+  328  sudo cat /var/log/mail.log
+  329  telnet localhost 143
+  330  sudo ufw status 
+  331  sudo dovecot -n
+  332  sudo nano /etc/dovecot/conf.d/10-ssl.conf
+  333  sudo nano /etc/dovecot/conf.d/10-master.conf
+  334  sudo usermod -a -G ssl-cert dovecot
+  335  sudo chmod -R 755 /etc/letsencrypt/live/
+  336  sudo chmod -R 755 /etc/letsencrypt/archive/
+  337  sudo systemctl restart postfix dovecot nginx php8.3-fpm.service opendkim ufw
+  338  sudo journalctl -xeu dovecot.service
+  339  sudo nano /etc/dovecot/conf.d/10-master.conf
+  340  sudo systemctl restart postfix dovecot nginx php8.3-fpm.service opendkim ufw
+  341  sudo systemctl status dovecot
+  342  sudo journalctl -u dovecot -n 50
+  343  telnet localhost 143
+  344  openssl s_client -connect localhost:993
+  345  sudo opendkim-testkey -d planetmilav.com -s mail -vvv
+  346  sudo rm -rf /etc/opendkim/keys/planetmilav.com
+  347  sudo mkdir -p /etc/opendkim/keys/planetmilav.com
+  348  cd /etc/opendkim/keys/planetmilav.com
+  349  sudo opendkim-genkey -b 2048 -d planetmilav.com -D /etc/opendkim/keys/planetmilav.com -s mail -v
+  350  sudo chown -R opendkim:opendkim /etc/opendkim/keys
+  351  sudo chmod 600 /etc/opendkim/keys/planetmilav.com/mail.private
+  352  sudo nano /etc/opendkim.conf
+  353  sudo nano /etc/opendkim/KeyTable
+  354  sudo nano /etc/opendkim/SigningTable
+  355  sudo nano /etc/opendkim/TrustedHosts
+  356  sudo cat /etc/opendkim/keys/planetmilav.com/mail.txt
+  357  sudo nano /etc/opendkim/keys/planetmilav.com/mail.txt
+  358  sudo mkdir -p /var/spool/postfix/opendkim
+  359  sudo chown opendkim:postfix /var/spool/postfix/opendkim
+  360  sudo systemctl restart opendkim postfix
+  361  sudo opendkim-testkey -d planetmilav.com -s mail -vvv
+  362  sudo nano /etc/postfix/main.cf
+  363  cd ~
+  364  echo "DKIM Test" | mail -s "DKIM Test" milav.dabgar@gmail.com
+  365  sudo apt install mailutils
+  366  echo "DKIM Test" | mail -s "DKIM Test" milav.dabgar@gmail.com
+  367  sudo tail -f /var/log/mail.log
+  368  sudo tail /var/log/mail.log
+  369  echo "DKIM Test" | mail -s "DKIM Test" admin@planetmilav.com
+  370  sudo tail /var/log/mail.log
+  371  sudo cat /var/log/mail.log
+  372  echo "DKIM Test" | mail -s "DKIM Test" milav.dabgar@outlook.com
+  373  sudo cat /var/log/mail.log
+  374  echo "DKIM Test" | mail -s "DKIM Test" milav.dabgar@gmail.com
+  375  sudo cat /var/log/mail.log
+  376  sudo systemctl status opendkim
+  377  sudo mkdir -p /var/spool/postfix/opendkim
+  378  sudo chown opendkim:postfix /var/spool/postfix/opendkim
+  379  sudo nano /etc/opendkim.conf
+  380  sudo nano /etc/postfix/main.cf
+  381  sudo systemctl restart opendkim postfix
+  382  ls -l /var/spool/postfix/opendkim/opendkim.sock
+  383  sudo journalctl -u opendkim
+  384  echo "Test" | mail -s "Test" milav.dabgar@outlook.com
+  385  sudo cat /var/log/mail.log
+  386  sudo nano /etc/opendkim.conf
+  387  ls -l /var/spool/postfix/opendkim/opendkim.sock
+  388  sudo nano /etc/dovecot/conf.d/auth-sql.conf.ext
+  389  sudo nano /etc/opendkim.conf
+  390  sudo doveadm auth test admin@planetmilav.com
+  391  doveadm auth test admin@planetmilav.com
+  392  hostnamectl 
+  393  sudo nano /etc/roundcube/config.inc.php
+  394  sudo apt remove --purge roundcube roundcube-*
+  395  sudo apt update && sudo apt dist-upgrade -y && sudo apt autoremove -y
+  396  sudo mysql -u root -p
+  397  sudo apt install roundcube roundcube-mysql roundcube-plugins
+  398  sudo cat /var/log/mail.log
+  399  sudo nano /etc/roundcube/config.inc.php
+  400  sudo nano /etc/roundcube/debian-db-roundcube.php 
+  401  sudo nano /etc/roundcube/debian-db.php 
+  402  sudo nano /etc/roundcube/apache.conf 
+  403  sudo nano /usr/share/roundcube/config.inc.php.sample 
+  404  sudo nano /etc/roundcube/config.inc.php
+  405  sudo ufw app list
+  406  sudo ufw status
+  407  sudo cat /var/log/mail.log
+  408  sudo nano /etc/roundcube/config.inc.php
+  409  sudo cat /var/log/mail.log
+  410  sudo nano /etc/roundcube/config.inc.php
+  411  sudo ls -l /var/spool/postfix/private/dovecot-lmtp
+  412  telnet mail.planetmilav.com 993
+  413  doveadm auth test milav@planetmilav.com
+  414  sudo doveadm auth test milav@planetmilav.com
+  415  sudo apt install dovecot-lmtp
+  416  sudo apt install dovecot-lmtpd 
+  417  sudo doveadm service list
+  418  sudo doveadm service status
+  419  sudo nano /etc/roundcube/config.inc.php
+  420  echo "This is a test message" | mail -s "Test Subject" milav@planetmilav.com
+  421  echo "This is a test message" | mail -s "Test Subject" milav.dabgar@outlook.com
+  422  echo "This is a test message" | mail -s "Test Subject" milav.dabgar@gmail.com
+  423  sudo cat /var/log/mail.log
+  424  /etc/postfix/main.cf
+  425  sudo nano /etc/postfix/main.cf
+  426  netstat -tlnp | grep 587
+  427  postconf -n | grep sasl
+  428  sudo nano /etc/roundcube/config.inc.php
+  429  postconf -n | grep sasl
+  430  sudo nano /etc/roundcube/config.inc.php
+  431  /etc/postfix/main.cf
+  432  sudo nano /etc/postfix/main.cf
+  433  telnet localhost 587
+  434  sudo nano /etc/dovecot/conf.d/10-master.conf
+  435  sudo nano /etc/postfix/master.cf
+  436  systemctl restart postfix dovecot
+  437  telnet localhost 587
+  438  sudo nano /etc/postfix/master.cf
+  439  sudo nano /etc/postfix/main.cf
+  440  systemctl restart postfix dovecot
+  441  sudo systemctl restart postfix dovecot
+  442  netstat -tlnp | grep 587
+  443  sudo apt install net-tools
+  444  netstat -tlnp | grep 587
+  445  sudo netstat -tlnp | grep 587
+  446  tail -f /var/log/mail.log
+  447  sudo tail -f /var/log/mail.log
+  448  sudo netstat -tlnp
+  449  sudo nano /etc/roundcube/config.inc.php
+  450  sudo netstat -tlnp
+  451  telnet localhost 587
+  452  sudo lsof -i :587
+  453  sudo aa-status
+  454  sudo nano /etc/postfix/master.cf
+  455  systemctl restart postfix dovecot
+  456  sudo systemctl restart postfix dovecot
+  457  sudo netstat -tlnp
+  458  telnet localhost 587
+  459  sudo nano /etc/roundcube/config.inc.php
+  460  sudo systemctl restart postfix dovecot
+  461  ls
+  462  history > 241102_bash_history.txt 
+  463  nano 241102_bash_history.txt 
+  464  nano 241101_bash_history.txt 
+  465  nano 241102_bash_history.txt 
+  466  sudo nano /var/log/mail.log
+  467  sudo systemctl restart opendkim postfix nginx postfixadmin dovecot
+  468  sudo systemctl restart opendkim postfix nginx dovecot
+  469  sudo systemctl status opendkim.service 
+  470  sudo systemctl status postfix
+  471  sudo journalctl -u opendkim
+  472  echo "Test" | mail -s "Test" milav.dabgar@outlook.com
+  473  sudo journalctl -u opendkim
+  474  sudo nano /var/log/mail.log
+  475  sudo nano /etc/opendkim.conf
+  476  sudo chown opendkim:opendkim /var/spool/postfix/opendkim
+  477  sudo chmod 755 /var/spool/postfix/opendkim
+  478  sudo nano /etc/postfix/main.cf
+  479  sudo adduser postfix opendkim
+  480  sudo systemctl restart opendkim postfix
+  481  ls -la /var/spool/postfix/opendkim/opendkim.sock
+  482  sudo systemctl status opendkim
+  483  echo "Test" | mail -s "Test dkim" milav.dabgar@outlook.com
+  484  sudo nano /var/log/mail.log
+  485  echo "Test" | mail -s "Test dkim" milav.dabgar@outlook.com
+  486  sudo nano /var/log/mail.log
+  487  sudo nano /etc/postfix/main.cf
+  488  sudo systemctl restart opendkim postfix
+  489  echo "Test" | mail -s "Test dkim" milav.dabgar@outlook.com
+  490  sudo nano /var/log/mail.log
+  491  sudo nano /etc/postfix/main.cf
+  492  sudo systemctl restart opendkim postfix
+  493  echo "Test" | mail -s "Test dkim" milav.dabgar@outlook.com
+  494  sudo nano /var/log/mail.log
+  495  sudo nano /etc/postfix/main.cf
+  496  sudo systemctl restart opendkim postfix
+  497  sudo nano /etc/opendkim.conf
+  498  sudo nano /etc/postfix/main.cf
+  499  sudo nano /var/log/mail.log
+  500  sudo nano /etc/opendkim.conf
+  501  sudo chmod 755 /var/spool/postfix/opendkim
+  502  sudo adduser postfix opendkim
+  503  sudo adduser opendkim postfix
+  504  sudo chown -R opendkim:opendkim /etc/opendkim
+  505  sudo chmod -R go-rw /etc/opendkim/keys
+  506  ls -la /var/spool/postfix/opendkim/
+  507  sudo systemctl restart opendkim postfix
+  508  ls -la /var/spool/postfix/opendkim/opendkim.sock
+  509  echo "Test" | mail -s "Test dkim gain" milav.dabgar@outlook.com
+  510  sudo nano /var/log/mail.log
+  511  sudo tail -f /var/log/mail.log
+  512  sudo nano /etc/opendkim.conf
+  513  ls -l /etc/opendkim/keys/planetmilav.com/mail.private
+  514  sudo ss -a | grep opendkim
+  515  sudo mkdir -p /etc/systemd/system/opendkim.service.d/
+  516  sudo nano /etc/systemd/system/opendkim.service.d/override.conf
+  517  sudo systemctl daemon-reload
+  518  sudo systemctl stop postfix opendkim
+  519  sudo rm -f /var/spool/postfix/opendkim/opendkim.sock
+  520  sudo systemctl start opendkim postfix
+  521  sudo ss -a | grep opendkim
+  522  echo "Test" | mail -s "Test dkim gain" milav.dabgar@outlook.com
+  523  sudo tail -f /var/log/mail.log
+  524  ls -l /run/opendkim/opendkim.pid
+  525  sudo ls -l /run/opendkim/opendkim.pid
+  526  sudo rm -rf /etc/systemd/system/opendkim.service.d/
+  527  sudo nano /etc/opendkim.conf
+  528  sudo systemctl restart opendkim postfix
+  529  sudo systemctl daemon-reload
+  530  sudo systemctl restart opendkim postfix
+  531  sudo systemctl status opendkim postfix
+  532  echo "Test" | mail -s "Test dkim gain" milav.dabgar@outlook.com
+  533  sudo tail -f /var/log/mail.log
+  534  sudo nano /etc/opendkim.conf
+  535  sudo nano /etc/postfix/main.cf
+  536  sudo usermod -a -G vmail opendkim
+  537  sudo usermod -a -G opendkim vmail
+  538  sudo chown opendkim:postfix /var/spool/postfix/opendkim
+  539  sudo chmod 750 /var/spool/postfix/opendkim
+  540  sudo nano /etc/opendkim.conf
+  541  sduo ls -al /run/opendkim
+  542  sudo ls -al /run/opendkim
+  543  sudo chown opendkim:opendkim /run/opendkim
+  544  sudo chmod 755 /run/opendkim
+  545  sudo usermod -a -G opendkim postfix
+  546  sudo usermod -a -G postfix opendkim
+  547  sudo systemctl stop postfix opendkim
+  548  sudo rm -f /var/spool/postfix/opendkim/opendkim.sock
+  549  sudo systemctl start opendkim
+  550  sleep 2
+  551  sudo systemctl start postfix
+  552  sudo systemctl status opendkim postfix
+  553  ls -la /var/spool/postfix/opendkim/opendkim.sock
+  554  sudo ls -la /var/spool/postfix/opendkim/opendkim.sock
+  555  echo "Test" | mail -s "Test dkim gain" milav.dabgar@outlook.com
+  556  sudo tail -f /var/log/mail.log
+  557  sudo systemctl status opendkim postfix
+  558  sudo tail -f /var/log/mail.log
+  559  ping google.com
+  560  ping alt1.gmail-smtp-in.l.google.com
+  561  ping alt1.gmail-smtp-in.l.google.com:587
+  562  ping alt1.gmail-smtp-in.l.google.com:25
+  563  sudo reboot now
+  564  sudo tail -f /var/log/mail.log
+  565  sudo nano /var/log/mail.log
+  566  cd code/
+  567  git@github.com:milavdabgar/Config-to-MD.git
+  568  git clone git@github.com:milavdabgar/Config-to-MD.git
+  569  cd Config-to-MD/
+  570  ls
+  571  cd ~
+  572  ls
+  573  history > 241103_bash_history.txt

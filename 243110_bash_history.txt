@@ -1,0 +1,1570 @@
+  370  sudo useradd -m testuser
+  371  sudo passwd testuser
+  372  sudo systemctl restart postfix
+  373  sudo systemctl restart dovecot
+  374  telnet localhost 25
+  375  su testuser
+  376  sudo cd /home/testuser/Maildir
+  377  sudo ls /home/testuser/Maildir
+  378  sudo su
+  379  telnet localhost 25
+  380  sudo apt install mailutils
+  381  echo "Test email body" | mail -s "Test Email" testuser@localhost
+  382  su - testuser 
+  383  sudo su
+  384  sudo nano /etc/postfix/main.cf
+  385  sudo nano /etc/dovecot/dovecot.conf
+  386  sudo nano /etc/dovecot/conf.d/10-ssl.conf 
+  387  sudo nano /etc/dovecot/dovecot.conf
+  388  sudo systemctl restart postfix
+  389  sudo systemctl restart dovecot
+  390  sudo nano /etc/dovecot/dovecot.conf
+  391  sudo systemctl restart dovecot
+  392  sudo systemctl status dovecot
+  393  sudo systemctl status postfix
+  394  echo "Tesgdfgdft email body" | mail -s "Test Email" testuser@localhost
+  395  echo "Tesgdfgdft email body" | mail -s "Test Email" testuser@planetmilav.com
+  396  mail
+  397  sudo nano /etc/dovecot/dovecot.conf
+  398  sudo systemctl status dovecot
+  399  sudo nano /etc/dovecot/conf.d/10-auth.conf
+  400  sudo systemctl status dovecot
+  401  sudo systemctl restart dovecot
+  402  sudo systemctl status dovecot
+  403  sudo nano /etc/dovecot/dovecot.conf
+  404  sudo systemctl restart dovecot
+  405  sudo systemctl status dovecot
+  406  echo "Tesgdfgdgfdgdfgdfft email body" | mail -s "Test Email" testuser@planetmilav.com
+  407  sudo systemctl status dovecot
+  408  sudo systemctl restart apache
+  409  sudo systemctl restart apache2
+  410  sudo reboot now
+  411  sudo systemctl restart apache2
+  412  sudo systemctl status apache2.service
+  413  sudo nano /etc/apache2/sites-available/gpplmsv1.planetmilav.com.conf 
+  414  sudo nano /etc/apache2/sites-available/gpplmsv1.planetmilav.com-le-ssl.conf 
+  415  sudo journalctl -xeu apache2.service
+  416  sudo nano /etc/apache2/sites-available/gpplmsv1.planetmilav.com-le-ssl.conf 
+  417  sudo nano /etc/letsencrypt/options-ssl-apache.con
+  418  sudo certbot certonly --standalone -d mail.planetmilav.com
+  419  sudo apt-get install certbot
+  420  sudo nano /etc/letsencrypt/options-ssl-apache.conf
+  421  sudo ls /etc/letsencrypt/
+  422  sudo certbot renew
+  423  sudo certbot --apache
+  424  sudo apt-get install python3-certbot-apache
+  425  sudo certbot --apache
+  426  sudo ls /etc/letsencrypt/
+  427  sudo certbot certonly --standalone -d mail.planetmilav.com
+  428  sudo ls /etc/letsencrypt/
+  429  sudo ls /etc/letsencrypt/live/
+  430  sudo certbot --apache
+  431  sudo a2dissite *-le-ssl.conf
+  432  sudo systemctl reload apache2
+  433  sudo rm /etc/apache2/sites-available/*-le-ssl.conf
+  434  sudo nano /etc/apache2/sites-available/default-ssl.conf 
+  435  sudo nano /etc/apache2/sites-available/000-default.conf 
+  436  sudo rm /etc/apache2/sites-available/default-ssl.c
+  437  sudo certbot --apache
+  438  sudo nano /etc/apache2/sites-available/000-default.conf 
+  439  sudo nano /etc/apache2/sites-available/planetmilav.com-le-ssl.conf 
+  440  sudo systemctl start apache2
+  441  sudo nano /etc/apache2/sites-enabled/gpplmsv1.planetmilav.com
+  442  sudo nano /etc/apache2/sites-enabled/gpplmsv1.planetmilav.com-le-ssl.conf 
+  443  sudo systemctl reload apache2
+  444  sudo systemctl restart apache2
+  445  sudo systemctl status apache2
+  446  sudo apt update && sudo apt dist-upgrade -y && sudo apt autoremove -y && sudo snap refresh
+  447  sudo su
+  448  echo "Tesgdfgdgfdgdfgdfft email body" | mail -s "Test Email2" testuser@planetmilav.com
+  449  sudo nano /etc/dovecot/dovecot.conf
+  450  sudo nano /etc/dovecot/conf.d/10-auth.conf
+  451  sudo nano /etc/dovecot/dovecot.conf
+  452  sudo systemctl restart postfix
+  453  sudo systemctl restart dovecot
+  454  sudo systemctl status postfix
+  455  sudo systemctl status dovecot
+  456  echo "Tesgdfgdgfdgdfgdfft email body" | mail -s "Test Email24" testuser@planetmilav.com
+  457  mail
+  458  echo "Tesgdfgdgfdgdfgdfft email body" | mail -s "Test Email24" milav.dabgar@gmail.com
+  459  echo "Tesgdfgdgfdgdfgdfft email body" | mail -s "Test Email24" testuser@planetmilav.com
+  460  sudo nano /etc/dovecot/dovecot.conf
+  461  sudo nano /etc/postfix/main.cf
+  462  sudo systemctl restart dovecot postfix
+  463  sudo systemctl status dovecot postfix
+  464  echo "Tesgdfgdgfdgdfgdfft email body" | mail -s "Test Email24" testuser@planetmilav.com
+  465  sudo nano /etc/postfix/main.cf
+  466  sudo nano /etc/dovecot/dovecot.conf
+  467  sudo systemctl restart dovecot postfix
+  468  sudo systemctl status dovecot postfix
+  469  echo "Tesgdfgdgfdgdfgdfft email body" | mail -s "Test Email24" testuser@planetmilav.com
+  470  echo "Tesgdfgdgfdgdfgdfft email body" | mail -s "Test Email24" milav.dabgar@gmail.com
+  471  less /var/log/mail.log
+  472  sudo less /var/log/mail.log
+  473  sudo cat /var/log/mail.log
+  474  sudo grep postfix /var/log/mail.log
+  475  sudo grep dovecot /var/log/mail.log
+  476  timedatectl
+  477  timedatectl list-timezones
+  478  sudo timedatectl set-timezone Asia/Kolkata 
+  479  timedatectl
+  480  locale
+  481  sudo grep postfix /var/log/mail.log
+  482  echo "Tesgdfgdgfdgdfgdfft email body" | mail -s "Test Email2445" testuser@planetmilav.com
+  483  sudo grep postfix /var/log/mail.log
+  484  sudo grep dovecot /var/log/mail.log
+  485  echo "Tesgdfgdgfdgdfgdfft email body" | mail -s "Test Email2445" milav@planetmilav.com
+  486  mail
+  487  ls
+  488  cat /home/milav/mbox 
+  489  which python
+  490  pip install requests
+  491  pip3 install requests
+  492  sudo apt install python3-pip
+  493  pip install requests
+  494  sudo grep dovecot /var/log/mail.log
+  495  echo "Tesgdfgdgfdgdfgdfft email body" | mail -s "Test Email2445" milav@planetmilav.com
+  496  sudo grep dovecot /var/log/mail.log
+  497  sudo grep postfix /var/log/mail.log
+  498  sudo nano /var/log/mail.err 
+  499  sudo nano /etc/dovecot/dovecot.conf
+  500  sudo rm /var/log/mail.err 
+  501  sudo rm /var/log/mail.log 
+  502  sudo systemctl restart dovecot postfix
+  503  sudo systemctl status dovecot postfix
+  504  sudo cat /var/log/mail.log
+  505  sudo cat /var/log/mail.err
+  506  echo "Tesgdfgdgfdgdfgdfft email body" | mail -s "Test Email2445" milav.dabgar@gmail.com
+  507  sudo cat /var/log/mail.err
+  508  sudo cat /var/log/mail.log
+  509  sudo ls -al /var/log/
+  510  sudo nano /etc/dovecot/dovecot.conf
+  511  sudo systemctl status dovecot postfix
+  512  sudo systemctl restart dovecot postfix
+  513  sudo systemctl status dovecot postfix
+  514  sudo nano /etc/dovecot/dovecot.conf
+  515  sudo systemctl status dovecot postfix
+  516  sudo systemctl restart dovecot postfix
+  517  sudo cat /var/log/mail.log
+  518  sudo cat /var/log/mail.err
+  519  sudo systemctl restart dovecot postfix
+  520  sudo journalctl -xeu dovecot.service
+  521  sudo nano /etc/dovecot/dovecot.conf
+  522  sudo apt install dovecot-core dovecot-imapd dovecot-pop3d
+  523  sudo systemctl restart apache2
+  524  sudo apt remove --purge postfixadmin postfix postfix-mysql dovecot-core dovecot-imapd dovecot-lmtpd dovecot-mysql spamassassin spamc fail2ban
+  525  sudo systemctl stop dovecot postfix
+  526  sudo apt remove --purge dovecot-core dovecot-imapd dovecot-pop3d
+  527  sudo rm -rf /var/lib/dovecot/
+  528  sudo rm -rf /etc/dovecot/conf.d/
+  529  sudo apt update && sudo apt dist-upgrade -y && sudo apt autoremove -y && sudo snap refresh
+  530  sudo a2dissite postfixadmin*
+  531  sudo systemctl reload apache2
+  532  sudo rm /etc/apache2/sites-available/postfixadmin*
+  533  sudo systemctl reload apache2
+  534  docker run -d -p 8000:8000 gpp-lms-v1
+  535  sudo apt install nginx
+  536  sudo systemctl stop apache2
+  537  sudo nano /etc/nginx/sites-available/default 
+  538  sudo systemctl status nginx
+  539  sudo systemctl status apache2
+  540  sudo systemctl restart nginx
+  541  sudo systemctl status nginx
+  542  sudo apt install certbot python3-certbot-nginx
+  543  sudo certbot --nginx
+  544  sudo cat /etc/apache2/sites-available/
+  545  sudo cat /etc/apache2/sites-available/*
+  546  sudo cat /etc/apache2/.htaccess
+  547  sudo cd /etc/nginx/sites-available/
+  548  cd /etc/nginx/
+  549  ls -al
+  550  cd sites-available/
+  551  ls
+  552  cat default 
+  553  sudo nano planetmilav.com
+  554  sudo certbot --nginx
+  555  ls
+  556  nano default 
+  557  sudo ln -s /etc/nginx/sites-available/planetmilav.com /etc/nginx/sites-enabled/
+  558  sudo nano planetmilav.com
+  559  sudo systemctl reload nginx
+  560  sudo journalctl -xeu nginx.service
+  561  sudo nano planetmilav.com
+  562  sudo systemctl reload nginx
+  563  sudo journalctl -xeu nginx.service
+  564  sudo nano planetmilav.com
+  565  sudo systemctl reload nginx
+  566  sudo journalctl -xeu nginx.service
+  567  sudo nano planetmilav.com
+  568  sudo systemctl reload nginx
+  569  sudo certbot --nginx
+  570  sudo systemctl stop nginx
+  571  sudo systemctl restart apache2
+  572  mail
+  573  clear
+  574  sudo systemctl stop apache2
+  575  sudo systemctl restart nginx
+  576  cd /etc/nginx/sites-available/
+  577  ls
+  578  sudo nano portfolio.planetmilav.com
+  579  ls
+  580  sudo nano portfolio.planetmilav.com
+  581  sudo ln -s /etc/nginx/sites-available/portfolio.planetmilav.com /etc/nginx/sites-enabled/
+  582  sudo certbot --nginx
+  583  sudo nano portfolio.planetmilav.com
+  584  sudo cat /etc/apache2/sites-available/gpplmsv1.planetmilav.com.conf 
+  585  sudo nano gpplmsv1.planetmilav.com
+  586  sudo ln -s /etc/nginx/sites-available/gpplmsv1.planetmilav.com /etc/nginx/sites-enabled
+  587  sudo certbot --nginx -d gpplmsv1.planetmilav.com
+  588  sudo nano gpplmsv1.planetmilav.com
+  589  sudo nano planetmilav.com 
+  590  sudo apt install php-fpm php-mysql
+  591  sudo systemctl status php8.1-fpm.service 
+  592  sudo nano /etc/php/7.x/fpm/pool.d/www.conf
+  593  sudo nano /etc/php/8.x/fpm/pool.d/www.conf
+  594  sudo nano /etc/php/8.1/fpm/pool.d/www.conf
+  595  sudo systemctl status php8.1-fpm.service 
+  596  sudo nano planetmilav.com 
+  597  sudo nginx -t
+  598  sudo nano default 
+  599  sudo nginx -t
+  600  sudo systemctl restart nginx
+  601  sudo nano planetmilav.com 
+  602  ls
+  603  sudo nano planetmilav.com 
+  604  sudo nginx -t
+  605  sudo nano planetmilav.com 
+  606  sudo nginx -t
+  607  sudo systemctl restart nginx
+  608  sudo nginx -t
+  609  sudo nano planetmilav.com 
+  610  sudo systemctl status php8.1-fpm.service 
+  611  sudo nano planetmilav.com 
+  612  sudo nginx -t
+  613  sudo systemctl restart nginx
+  614  sudo nano planetmilav.com 
+  615  sudo nginx -t
+  616  sudo nano planetmilav.com 
+  617  sudo nginx -t
+  618  sudo systemctl restart nginx
+  619  sudo cp planetmilav.com texeg.planetmilav.com
+  620  sudo nano texeg.planetmilav.com 
+  621  sudo ln -s /etc/nginx/sites-available/texeg.planetmilav.com /etc/nginx/sites-enabled
+  622  sudo certbot --nginx
+  623  sudo nano texeg.planetmilav.com 
+  624  sudo nginx -t
+  625  sudo certbot --nginx
+  626  ls
+  627  cd ../sites-enabled/
+  628  ls
+  629  sudo apt remove --purge apache2
+  630  sudo rm -rf /etc/apache2/sites-available
+  631  sudo apt update && sudo apt dist-upgrade -y && sudo apt autoremove -y && sudo snap refresh
+  632  sudo ufw status 
+  633  cat /etc/passwd
+  634  ls /etc/
+  635  getent group sudo
+  636  sudo usermod -aG sudo milav
+  637  getent group sudo
+  638  ufw enable
+  639  su - ubuntu 
+  640  ufw app list
+  641  sudo apt install ufw
+  642  ufw app list
+  643  sudo ufw app list
+  644  sudo ufw allow OpenSSH
+  645  sudo ufw allow Nginx Full
+  646  sudo ufw allow 'Nginx Full'
+  647  ufw status
+  648  sudo ufw status
+  649  getent group sudo
+  650  sudo cat /etc/sudoers
+  651  su - ubuntu
+  652  ls -al 
+  653  echo "Test mail" | mail -s "Test Postfix" ubuntu@planetmilav.com
+  654  cat Maildir/new/1706718549.Vb302I63bbdM367636.ubuntu 
+  655  sudo ufw status
+  656  sudo ufw app list
+  657  sudo ufw allow "Dovecot IMAP"
+  658  sudo ufw allow "Dovecot POP3"
+  659  sudo ufw allow "Dovecot Secure IMAP"
+  660  sudo ufw allow "Dovecot Secure POP3"
+  661  sudo ufw allow "Nginx Full"
+  662  sudo ufw allow "Nginx HTTP"
+  663  sudo ufw allow "Nginx HTTPS"
+  664  sudo ufw allow "Postfix"
+  665  sudo ufw allow "Postfix SMTPS"
+  666  sudo ufw allow "Postfix Submission"
+  667  openssl s_client -connect pop3.planetmilav.com:995
+  668  sudo nano /etc/dovecot/conf.d/10-ssl.conf
+  669  sudo nano /etc/postfix/main.cf
+  670  sudo nano /etc/dovecot/conf.d/10-ssl.conf
+  671  sudo nano /etc/dovecot/conf.d/10-master.conf
+  672  sudo systemctl restart postfix dovecot
+  673  echo "Test mail2" | mail -s "Test Postfix" ubuntu@planetmilav.com
+  674  sudo ufw status
+  675  sudo systemctl restart dovecot
+  676  sudo nano /etc/dovecot/conf.d/20-imap.conf 
+  677  sudo nano /etc/dovecot/conf.d/10-auth.conf 
+  678  sudo systemctl restart dovecot
+  679  sudo nano /etc/postfix/main.cf
+  680  cat /var/log/mail.log
+  681  sudo cat /var/log/mail.log
+  682  sudo cat /var/log/mail.err
+  683  crontab -e
+  684  sudo cat /var/log/mail.log
+  685  echo "Test mail2" | mail -s "Test Postfix" milav.dabgar@gmail.com
+  686  sudo cat /var/log/mail.log
+  687  sudo nano /etc/postfix/main.cf
+  688  sudo nano /etc/postfix/master.cf
+  689  sudo nano /etc/postfix/main.cf
+  690  sudo ls /etc/postfix/sasl/
+  691  ls
+  692  sudo nano /etc/postfix/main.cf
+  693  sudo nano /etc/postfix/master.cf
+  694  sudo systemctl restart postfix dovecot
+  695  sudo cat /var/log/mail.log
+  696  doveadm auth test milav@planetmilav.com
+  697  sudo ufw status
+  698  sudo ufw allow ssh
+  699  sudo ufw status
+  700  sudo apt install postfix
+  701  sudo nano /etc/postfix/main.cf
+  702  sudo nano /etc/postfix/main.cf.dist
+  703  sudo nano /etc/postfix/main.cf
+  704  sudo nano /usr/share/postfix/main.cf.dist
+  705  sudo cp /etc/postfix/main.cf /etc/postfix/main.cf.backup
+  706  sudo nano /etc/postfix/main.cf
+  707  sudo apt install dovecot-imapd dovecot-pop3d
+  708  sudo nano /etc/dovecot/dovecot.conf
+  709  sudo cp /etc/dovecot/dovecot.conf /etc/dovecot/dovecot.conf.backup
+  710  sudo nano /etc/dovecot/dovecot.conf
+  711  sudo systemctl restart postfix dovecot
+  712  sudo journalctl -xeu dovecot.service
+  713  sudo nano /etc/dovecot/dovecot.conf
+  714  sudo systemctl restart postfix dovecot
+  715  sudo nano /etc/dovecot/dovecot.conf
+  716  sudo systemctl restart postfix dovecot
+  717  ufw app list
+  718  sudo ufw app list
+  719  sudo apt install postfix dovecot-core dovecot-imapd
+  720  sudo cp /etc/dovecot/dovecot.conf.backup /etc/dovecot/dovecot.conf
+  721  sudo cp /etc/postfix/main.cf.backup /etc/postfix/main.cf
+  722  sudo nano /etc/postfix/main.cf
+  723  sudo ls /etc/letsencrypt/live/
+  724  sudo ls -al /etc/letsencrypt/live/
+  725  sudo ls -al /etc/letsencrypt/
+  726  sudo ls -al /etc/letsencrypt/keys/
+  727  sudo cat /etc/nginx/sites-available/portfolio.planetmilav.com 
+  728  sudo nano /etc/postfix/main.cf
+  729  sudo systemctl restart postfix
+  730  sudo systemctl status postfix
+  731  sudo nano /etc/dovecot/conf.d/10-mail.conf
+  732  sudo nano /etc/dovecot/conf.d/10-master.conf
+  733  sudo systemctl restart dovecot
+  734  sudo journalctl -xeu dovecot.service
+  735  sudo nano /etc/dovecot/conf.d/10-master.conf
+  736  sudo systemctl restart dovecot
+  737  sudo systemctl status dovecot
+  738  sudo systemctl status dovecot postfix
+  739  sudo maildirmake /home/milav/Maildir
+  740  sudo apt install maildirmake
+  741  sudo apt install courier-maildrop
+  742  sudo apt install maildrop
+  743  sudo maildirmake /home/milav/Maildir
+  744  sudo rm -rf Maildir/
+  745  sudo maildirmake /home/milav/Maildir
+  746  ls
+  747  sudo rm -rf Maildir
+  748  ls
+  749  sudo maildirmake /home/milav/Maildir
+  750  sudo chown -R $USER:$USER /home/$USER/Maildir
+  751  ls -al
+  752  cd Maildir/
+  753  ls
+  754  ls -al
+  755  cd ~
+  756  su - ubuntu 
+  757  sudo reboot now
+  758  sudo ls /var/www/planetmilav.com/
+  759  sudo nano /etc/postfix/main.cf
+  760  sudo nano /etc/dovecot/conf.d/10-auth.conf
+  761  sudo nano /etc/dovecot/conf.d/10-master.conf
+  762  sudo nano /etc/dovecot/
+  763  sudo nano /etc/dovecot/conf.d/10-master.conf
+  764  sudo systemctl restart postfix dovecot
+  765  sudo journalctl -xeu dovecot.service
+  766  sudo nano /etc/dovecot/conf.d/10-master.conf
+  767  sudo systemctl restart postfix dovecot
+  768  doveadm auth test milav@planetmilav.com
+  769  sudo doveadm auth test milav@planetmilav.com
+  770  sudo nano /etc/dovecot/conf.d/10-auth.conf
+  771  sudo nano /etc/dovecot/conf.d/10-mail.conf
+  772  sudo nano /etc/postfix/main.cf
+  773  sudo nano /etc/dovecot/conf.d/10-master.conf
+  774  sudo nano /etc/postfix/master.cf
+  775  sudo systemctl restart dovecot postfix
+  776  sudo doveadm auth test milav@planetmilav.com
+  777  telnet localhost 25
+  778  telnet localhost 587
+  779  telnet planetmilav.com 587
+  780  sudo systemctl restart dovecot postfix
+  781  sudo systemctl status dovecot postfix
+  782  openssl s_client -connect localhost:587 -starttls smtp
+  783  openssl s_client -connect localhost:25 -starttls smtp
+  784  cat Maildir/new/1706776591.Vb302I63e92M495479.ubuntu 
+  785  doveadm auth test milav@planetmilav.com
+  786  echo "Test mail452" | mail -s "Test Postfix" milav.dabgar@gmail.com
+  787  sudo cat /var/log/mail.log
+  788  sudo ls /etc/dovecot/conf.d/10-master.conf 
+  789  sudo nano /etc/dovecot/conf.d/10-master.conf 
+  790  sudo nano /etc/postfix/main.cf
+  791  sudo cat /var/log/mail.log
+  792  dig -X 59.94.247.126
+  793  dig -x 59.94.247.126
+  794  sudo cat /var/log/mail.log
+  795  sudo apt install opendkim opendkim-tools
+  796  sudo apt install dkim-filter
+  797  sudo mkdir -p /etc/opendkim/keys/planetmilav.com
+  798  cd /etc/opendkim/keys/planetmilav.com
+  799  sudo opendkim-genkey -s mail -d planetmilav.com
+  800  sudo chown opendkim:opendkim mail.private
+  801  sudo nano /etc/opendkim.conf
+  802  sudo nano /etc/opendkim/SigningTable
+  803  sudo nano /etc/opendkim/KeyTable
+  804  sudo nano /etc/opendkim/TrustedHosts
+  805  sudo nano /etc/postfix/main.cf
+  806  sudo systemctl restart opendkim
+  807  sudo systemctl restart postfix
+  808  sudo cat /etc/opendkim/keys/planetmilav.com/mail.txt
+  809  sudo nano /etc/opendkim/keys/planetmilav.com/mail.txt
+  810  sudo nano /var/log/dovecot.log
+  811  sudo nano /var/log/mail.log
+  812  cat /var/log/mail.log
+  813  sudo cat /var/log/mail.log
+  814  smtp-user-enum
+  815  telnet localhost 25
+  816  id milav
+  817  id milav@planetmilav.com
+  818  sudo doveadm auth test milav
+  819  sudo doveadm auth test ubuntu
+  820  openssl s_client -connect localhost:587 -starttls smtp
+  821  sudo openssl s_client -connect localhost:587 -starttls smtp
+  822  sudo nano /etc/postfix/master.cf
+  823  sudo systemctl status dovecot postfix
+  824  sudo systemctl restart dovecot postfix
+  825  sudo systemctl status dovecot postfix
+  826  sudo ss -tuln | grep 587
+  827  sudo netstat -tuln | grep 587
+  828  sudo nano /etc/postfix/main.cf
+  829  sudo ufw status
+  830  sudo ss -tuln | grep 25
+  831  sudo ss -tuln | grep 140
+  832  sudo ss -tuln | grep 993
+  833  sudo ss -tuln | grep 995
+  834  sudo ss -tuln | grep 25
+  835  sudo ss -tuln | grep 110
+  836  sudo ss -tuln | grep 143
+  837  sudo nano /etc/postfix/master.cf
+  838  sudo systemctl status dovecot postfix
+  839  sudo systemctl restart dovecot postfix
+  840  sudo ss -tuln | grep 587
+  841  openssl s_client -connect localhost:587 -starttls smtp
+  842  echo -n 'milav' | base64
+  843  echo -n 'password' | base64
+  844  echo -n 'seagate' | base64
+  845  openssl s_client -connect localhost:587 -starttls smtp
+  846  telnet localhost 25
+  847  echo "Test mail2" | mail -s "Test Postfix" ubuntu@planetmilav.com
+  848  sudo cat /var/log/mail.log
+  849  dig -x 59.88.121.164
+  850  sudo cat /etc/opendkim/keys/yourdomain.com/mail.txt
+  851  sudo cat /etc/opendkim/keys/planetmilav.com/mail.txt
+  852  cd /etc/opendkim/
+  853  ls -al
+  854  cat SigningTable 
+  855  cat KeyTable 
+  856  cd keys/planetmilav.com/
+  857  ls
+  858  cat mail.private 
+  859  sudo cat mail.private 
+  860  sudo cat mail.txt 
+  861  dig +short mail._domainkey.planetmilav.com TXT
+  862  cd ~
+  863  echo "Test mail2" | mail -s "Test Postfix" milav.dabgar@gmail.com
+  864  sudo cat /var/log/mail.log
+  865  udo systemctl restart postfix opendkim
+  866  sudo systemctl restart postfix opendkim
+  867  sudo nano /etc/postfix/main.cf
+  868  sudo systemctl restart postfix opendkim
+  869  sudo ufw app list
+  870  echo "Test mail2" | mail -s "Test Postfix" milav.dabgar@gmail.com
+  871  sudo cat /var/log/mail.log
+  872  netstat -plunt | grep opendkim
+  873  sudo ss -tuln | grep opendkim
+  874  sudo ss -plunt | grep opendkim
+  875  sudo ss -plunt | grep 587
+  876  sudo apt install net-tools
+  877  netstat -plunt | grep opendkim
+  878  sudo netstat -plunt | grep opendkim
+  879  sudo cat /var/spool/postfix/opendkim/opendkim.sock
+  880  sudo cat /var/log/mail.log
+  881  sudo nano /etc/postfix/main.cf
+  882  sudo nano /etc/opendkim.conf
+  883  ls -al /etc/opendkim/keys/planetmilav.com/
+  884  sudo systemctl restart postfix opendkim
+  885  echo "Test mail2" | mail -s "Test Postfix" ubuntu@planetmilav.com
+  886  sudo opendkim-testkey -d planetmilav.com -s mail -vvv
+  887  sudo chown opendkim:opendkim /etc/opendkim/keys/planetmilav.com/mail.private 
+  888  chmod 600 /etc/opendkim/keys/planetmilav.com/mail.private
+  889  sudo chmod 600 /etc/opendkim/keys/planetmilav.com/mail.private
+  890  sudo systemctl restart opendkim postfix
+  891  sudo opendkim-testkey -d planetmilav.com -s mail -vvv
+  892  sudo nano /etc/postfix/main.cf
+  893  sudo systemctl status opendkim
+  894  sudo tail -f /var/log/opendkim.log
+  895  sudo cat /var/log/mail.log
+  896  sudo nano /etc/opendkim.conf
+  897  sudo cat /var/spool/postfix/opendkim
+  898  sudo mkdir -p /var/spool/postfix/opendkim
+  899  sudo chown opendkim:postfix /var/spool/postfix/opendkim
+  900  sudo chmod 0770 /var/spool/postfix/opendkim
+  901  sudo systemctl restart opendkim postfix
+  902  ls -l /var/spool/postfix/opendkim/opendkim.sock
+  903  sudo ls -l /var/spool/postfix/opendkim/opendkim.sock
+  904  sudo cat /var/log/mail.log
+  905  echo "Test mail2" | mail -s "Test Postfix" ubuntu@planetmilav.com
+  906  sudo cat /var/log/mail.log
+  907  sudo ls -l /var/spool/postfix/opendkim/opendkim.sock
+  908  sudo ls -sl /var/spool/postfix/opendkim/opendkim.sock
+  909  sudo nano /etc/opendkim.conf
+  910  sudo nano /etc/postfix/main.cf
+  911  sudo nano /etc/opendkim.conf
+  912  sudo gpasswd -a postfix opendkim
+  913  sudo systemctl restart opendkim postfix
+  914  sudo -u postfix ls -l /var/spool/postfix/opendkim/opendkim.sock
+  915  echo "Test mail2" | mail -s "Test Postfix" ubuntu@planetmilav.com
+  916  sudo cat /var/log/mail.log
+  917  sudo nano /etc/postfix/master.cf
+  918  sudo -u postfix ls -l /var/spool/postfix/opendkim/opendkim.sock
+  919  sudo nano /etc/postfix/master.cf
+  920  sudo systemctl restart opendkim postfix
+  921  sudo systemctl status opendkim postfix
+  922  sudo postfix reload
+  923  echo "Test mail2" | mail -s "Test Postfix" ubuntu@planetmilav.com
+  924  sudo cat /var/log/mail.log
+  925  sudo nano /etc/postfix/master.cf
+  926  sudo systemctl status opendkim postfix
+  927  sudo systemctl restart opendkim postfix
+  928  sudo nano /etc/postfix/master.cf
+  929  sudo systemctl restart opendkim postfix
+  930  sudo nano /etc/postfix/master.cf
+  931  sudo systemctl restart opendkim postfix
+  932  echo "Test mail2" | mail -s "Test Postfix dkim" ubuntu@planetmilav.com
+  933  sudo nano /etc/postfix/master.cf
+  934  sudo systemctl restart opendkim postfix
+  935  sudo apt install postfix postfix-mysql dovecot-core dovecot-imapd dovecot-lmtpd dovecot-mysql mariadb-server php-fpm php-mysql
+  936  mysql -u root -p
+  937  sudo apt install postfixadmin 
+  938  sudo nano /etc/postfixadmin/dbconfig.inc.php
+  939  sudo nano /etc/postfixadmin/config.inc.php 
+  940  sudo nano /etc/postfixadmin/dbconfig.inc.php
+  941  mysql -u root -p
+  942  sudo cp /etc/nginx/sites-available/texeg.planetmilav.com /etc/nginx/sites-available/postfixadmin.planetmilav.com
+  943  sudo nano /etc/nginx/sites-available/postfixadmin.planetmilav.com
+  944  sudo nano /etc/nginx/sites-available/portfolio.planetmilav.com
+  945  sudo nano /etc/nginx/sites-available/postfixadmin.planetmilav.com
+  946  sudo ln -s /etc/nginx/sites-available/postfixadmin.planetmilav.com /etc/nginx/sites
+  947  sudo certbot --nginx
+  948  sudo nano /etc/nginx/sites-available/postfixadmin.planetmilav.com
+  949  sudo systemctl restart opendkim postfix nginx
+  950  sudo nano /etc/postfixadmin/config.inc.php 
+  951  sudo nano /etc/postfix/main.cf
+  952  sudo nano /etc/postfix/mysql-virtual-mailbox-domains.cf
+  953  sudo nano /etc/postfix/mysql-virtual-mailbox-maps.cf
+  954  sudo nano /etc/postfix/mysql-virtual-alias-maps.cf
+  955  sudo nano /etc/dovecot/conf.d/auth-sql.conf.ext
+  956  sudo nano /etc/dovecot/dovecot-sql.conf.ext
+  957  sudo nano /etc/dovecot/conf.d/10-mail.conf
+  958  sudo mkdir -p /var/mail/vhosts/planetmilav.com
+  959  sudo chown -R vmail:vmail /var/mail/vhosts
+  960  sudo groupadd -g 5000 vmail
+  961  sudo useradd -m -d /var/mail/vhosts -s /usr/sbin/nologin -u 5000 -g vmail vmail
+  962  sudo chown -R vmail:vmail /var/mail/vhosts
+  963  sudo nano /etc/dovecot/conf.d/10-mail.conf
+  964  sudo nano /etc/dovecot/conf.d/10-auth.conf 
+  965  sudo nano /etc/dovecot/conf.d/10-auth.conf
+  966  sudo nano /etc/dovecot/dovecot-sql.conf.ext
+  967  sudo nano /etc/dovecot/conf.d/auth-sql.conf.ext
+  968  sudo nano /etc/dovecot/dovecot-sql.conf.ext
+  969  sudo groupadd -g 5000 vmail
+  970  sudo useradd -m -d /var/mail/vhosts -s /usr/sbin/nologin -u 5000 -g vmail vmail
+  971  sudo systemctl restart opendkim postfix nginx postfixadmin
+  972  sudo systemctl restart dovecot
+  973  sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
+  974  sudo nano /etc/opendkim/KeyTable 
+  975  sudo cat /etc/opendkim/KeyTable 
+  976  sudo cat /etc/opendkim/SigningTable 
+  977  sudo cat /etc/opendkim/TrustedHosts 
+  978  sudo opendkim-testkey -d planetmilav.com -s mail -vvv
+  979  curl http://planetmilav.com
+  980  sudo cat /etc/nginx/sites-available/planetmilav.com 
+  981  sudo nano /etc/nginx/sites-available/planetmilav.com 
+  982  sudo systemctl restart opendkim postfix nginx
+  983  curl http://planetmilav.com
+  984  sudo systemctl status postfix dovecot
+  985  sudo nano /etc/dovecot/conf.d/10-mail.conf 
+  986  sudo nano /etc/dovecot/conf.d/10-auth.conf 
+  987  sudo nano /etc/dovecot/dovecot-sql.conf.ext
+  988  id vmail
+  989  sudo chown -R vmail:vmail /var/mail/vhosts
+  990  sudo chmod -R 770 /var/mail/vhosts
+  991  sudo systemctl restart postfix dovecot
+  992  sudo systemctl status postfix dovecot
+  993  sudo doveconf | grep mail_location
+  994  sudo doveconf | grep userdb
+  995  sudo chown -R vmail:vmail /var/mail/vhosts
+  996  sudo find /var/mail/vhosts -type d -exec chmod 770 {} \;
+  997  sudo journalctl -u dovecot | tail
+  998  sudo nano /etc/dovecot/dovecot-sql.conf.ext
+  999  sudo nano /etc/dovecot/conf.d/10-auth.conf 
+ 1000  sudo systemctl status postfix dovecot
+ 1001  sudo systemctl restart postfix dovecot
+ 1002  sudo systemctl status postfix dovecot
+ 1003  sudo journalctl -u dovecot | tail
+ 1004  sudo systemctl status postfix dovecot
+ 1005  sudo journalctl -u dovecot | tail
+ 1006  sudo journalctl -u dovecot
+ 1007  sudo nano /etc/dovecot/conf.d/10-auth.conf 
+ 1008  sudo nano /etc/dovecot/dovecot-sql.conf.ext
+ 1009  sudo doveconf | grep userdb
+ 1010  sudo nano /etc/dovecot/conf.d/10-mail.conf 
+ 1011  sudo nano /etc/dovecot/dovecot.conf
+ 1012  sudo nano /etc/dovecot/conf.d/auth-system.conf.ext 
+ 1013  sudo nano /etc/dovecot/conf.d/auth-master.conf.ext 
+ 1014  sudo nano /etc/dovecot/conf.d/15-mailboxes.conf 
+ 1015  sudo nano /etc/dovecot/conf.d/20-imap.conf 
+ 1016  sudo nano /etc/dovecot/conf.d/20-lmtp.conf 
+ 1017  sudo nano /etc/dovecot/conf.d/10-master.conf 
+ 1018  sudo nano /etc/dovecot/conf.d/10-ssl.conf 
+ 1019  sudo nano /etc/dovecot/conf.d/auth-sql.conf.ext 
+ 1020  sudo nano /etc/dovecot/conf.d/10-director.conf 
+ 1021  sudo groupadd vmail 
+ 1022  sudo useradd -g vmail vmail
+ 1023  sudo usermod -d /var/mail vmail
+ 1024  sudo chown vmail:vmail /var/mail
+ 1025  sudo systemctl restart postfix dovecot
+ 1026  sudo journalctl -u dovecot | tail
+ 1027  sudo systemctl status postfix dovecot
+ 1028  sudo doveconf | grep userdb
+ 1029  sudo journalctl -u dovecot
+ 1030  sudo chown -R vmail:vmail /var/mail/vhosts
+ 1031  sudo chmod -R 775 /var/mail/vhosts
+ 1032  sudo nano /etc/dovecot/conf.d/10-mail.conf
+ 1033  sudo nano /etc/dovecot/dovecot-sql.conf.ext
+ 1034  sudo nano /etc/dovecot/conf.d/10-auth.conf
+ 1035  sudo nano /etc/dovecot/conf.d/auth-master.conf.ext 
+ 1036  sudo systemctl restart postfix dovecot
+ 1037  sudo doveconf | grep mail_
+ 1038  sudo doveconf | grep userdb
+ 1039  sudo journalctl -u dovecot
+ 1040  sudo nano /etc/dovecot/conf.d/10-mail.conf
+ 1041  sudo journalctl -u dovecot
+ 1042  sudo cat /var/log/mail.log
+ 1043  sudo cat /var/mail/vhosts/planetmilav.com/
+ 1044  sudo ls -al /var/mail/vhosts/planetmilav.com/
+ 1045  sudo cat /var/log/mail.log
+ 1046  echo "This is a test message" | mail -s "Test Subject" user1@planetmilav.com
+ 1047  sudo cat /var/log/mail.log
+ 1048  sudo apt-get install roundcube
+ 1049  sudo apt install roundcube roundcube-mysql roundcube-plugins
+ 1050  sudo nano /etc/nginx/sites-available/roundcube
+ 1051  sudo nano /etc/nginx/sites-available/planetmilav.com 
+ 1052  sudo nano /etc/nginx/sites-available/roundcube
+ 1053  sudo ln -s /etc/nginx/sites-available/roundcube /etc/nginx/sites-enabled/
+ 1054  sudo certbot --nginx
+ 1055  sudo ls /var/www/roundcube
+ 1056  sudo nano /etc/nginx/sites-available/postfixadmin.planetmilav.com 
+ 1057  sudo nano /etc/nginx/sites-available/roundcube
+ 1058  sudo nginx -t
+ 1059  sudo systemctl reload nginx
+ 1060  top
+ 1061  sudo journalctl -u dovecot
+ 1062  sudo nano /etc/dovecot/dovecot-sql.conf.ext
+ 1063  sudo systemctl reload dovecot
+ 1064  sudo journalctl -u dovecot
+ 1065  sudo journalctl -u postfix
+ 1066  sudo cat /var/log/mail.log
+ 1067  sudo ls -al /var/mail/vhosts/planetmilav.com/
+ 1068  sudo ls -al /var/mail/vhosts/planetmilav.com/user1/
+ 1069  sudo cat /var/log/mail.log
+ 1070  sudo nano /etc/postfix/main.cf
+ 1071  sudo nano /etc/postfix/mysql-virtual-mailbox-domains.cf
+ 1072  sudo nano /etc/postfix/main.cf
+ 1073  sudo systemctl reload dovecot postfix
+ 1074  sudo nano /etc/postfix/main.cf
+ 1075  sudo cat /var/log/mail.log
+ 1076  doveadm auth test user1@planetmilav.com
+ 1077  sudo doveadm auth test user2@planetmilav.com
+ 1078  sudo doveadm auth test user1@planetmilav.com
+ 1079  sudo cat /var/log/mail.log
+ 1080  sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && sudo snap refresh
+ 1081  sudo cat /var/log/mail.log
+ 1082  sudo doveadm auth test user2@planetmilav.com
+ 1083  sudo systemctl status dovecot postfix
+ 1084  sudo nano /etc/postfix/main.cf
+ 1085  sudo nano /etc/dovecot/conf.d/10-mail.conf
+ 1086  sudo nano /etc/dovecot/conf.d/10-auth.conf 
+ 1087  sudo nano /etc/dovecot/conf.d/auth-sql.conf.ext
+ 1088  sudo nano /etc/dovecot/dovecot-sql.conf.ext
+ 1089  telnet mail.planetmilav.com 993
+ 1090  openssl s_client -connect mail.planetmilav.com:993
+ 1091  sudo cat /var/log/mail.log
+ 1092  sudo nano /etc/roundcube/config.inc.php 
+ 1093  sudo cat /var/log/mail.log
+ 1094  sudo nano /etc/dovecot/conf.d/10-master.conf 
+ 1095  sudo nano /etc/postfix/main.cf
+ 1096  sudo ls -l /var/spool/postfix/private/dovecot-lmtp
+ 1097  sudo doveadm service list
+ 1098  sudo systemctl status dovecot
+ 1099  sudo apt install dovecot-lmtp
+ 1100  sudo nano /etc/dovecot/conf.d/10-master.conf 
+ 1101  sudo systemctl reload dovecot postfix
+ 1102  sudo systemctl status dovecot postfix
+ 1103  sudo nano /etc/dovecot/conf.d/10-master.conf
+ 1104  sudo systemctl restart dovecot postfix
+ 1105  sudo systemctl status dovecot postfix
+ 1106  sudo nano /etc/dovecot/conf.d/10-auth.conf 
+ 1107  sudo nano /etc/dovecot/conf.d/auth-system.conf.ext 
+ 1108  sudo systemctl restart dovecot postfix
+ 1109  sudo systemctl status dovecot postfix
+ 1110  sudo cat /var/log/mail.log
+ 1111  sudo doveadm service list
+ 1112  sudo doveadm service status
+ 1113  sudo doveadm auth test admin@planetmilav.com
+ 1114  sudo doveadm auth test user2@planetmilav.com
+ 1115  sudo cat /var/log/mail.log
+ 1116  sudo nano /etc/roundcube/config.inc.php 
+ 1117  sudo cat /etc/roundcube/config.inc.php 
+ 1118  sudo nano /etc/roundcube/config.inc.php 
+ 1119  sudo systemctl restart dovecot postfix roundcube
+ 1120  sudo systemctl restart dovecot postfix ngnix
+ 1121  sudo systemctl restart dovecot postfix nginx
+ 1122  sudo systemctl status dovecot postfix nginx
+ 1123  sudo cat /var/log/mail.log
+ 1124  crontab -e
+ 1125  nano code/ipEmail/cloudflare-dns-update-api.py 
+ 1126  nano code/ipEmail/.env 
+ 1127  sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
+ 1128  sudo reboot now
+ 1129  sudo apt install samba
+ 1130  sudo nano /etc/samba/smb.conf
+ 1131  sudo smbpasswd -a milav
+ 1132  sudo systemctl restart smbd
+ 1133  sudo ufw allow Samba
+ 1134  ls
+ 1135  mkdir Public
+ 1136  ls
+ 1137  cat Public/fsd.txt 
+ 1138  ls
+ 1139  ls -al
+ 1140  sudo apt install smbclient
+ 1141  smbclient -L 192.168.0.105
+ 1142  smbclient -L \\MILAV-G10DK-WIN\Users\Public
+ 1143  sudo apt-get install wsdd
+ 1144  sudo systemctl restart smbd nmbd wsdd
+ 1145  sudo systemctl status smbd nmbd wsdd
+ 1146  smbclient -L 192.168.0.105
+ 1147  sudo nano /etc/samba/smb.conf
+ 1148  sudo systemctl restart smbd nmbd wsdd
+ 1149  sudo apt remove --purge wsdd
+ 1150  sudo systemctl restart smbd nmbd
+ 1151  sudo systemctl status smbd nmbd
+ 1152  smbclient -L 192.168.0.105
+ 1153  sudo apt install wsdd
+ 1154  sudo nano /etc/default/wsdd
+ 1155  sudo systemctl status smbd nmbd wsdd
+ 1156  sudo systemctl restart smbd nmbd wsdd
+ 1157  sudo systemctl status smbd nmbd wsdd
+ 1158  wsdd --help
+ 1159  sudo nano /etc/default/wsdd
+ 1160  sudo systemctl restart smbd nmbd wsdd
+ 1161  sudo systemctl status smbd nmbd wsdd
+ 1162  smbclient -L 192.168.0.105
+ 1163  sudo apt remove --purge wsdd
+ 1164  sudo systemctl restart smbd nmbd
+ 1165  sudo systemctl status smbd nmbd
+ 1166  smbclient -L 192.168.0.105
+ 1167  smbclient -L 192.168.0.105/Public
+ 1168  sudo nano /etc/samba/smb.conf
+ 1169  net usershare info --long
+ 1170  sudo net usershare info --long
+ 1171  ls
+ 1172  ls -l
+ 1173  sudo nano /etc/samba/smb.conf
+ 1174  ls -ld / 
+ 1175  ls -ld /home
+ 1176  ls -ld /home/milav
+ 1177  ls -ld /home/milav/Public 
+ 1178  sudo nano /etc/samba/smb.conf
+ 1179  sudo chmod o+x /home/milav
+ 1180  sudo chmod 777 /home/milav/Public
+ 1181  ls -ld /home/milav/Public 
+ 1182  ls -ld / 
+ 1183  ls -ld /home
+ 1184  ls -ld /home/milav
+ 1185  ls -ld /home/milav/Public
+ 1186  ls -ld /home/milav/Public/
+ 1187  ls -l /home/milav/Public/
+ 1188  rm  /home/milav/Public/new/
+ 1189  rm -rf /home/milav/Public/new
+ 1190  ls -l /home/milav/Public/
+ 1191  sudo nano /etc/samba/smb.conf
+ 1192  wsdd
+ 1193  net usershare info --long
+ 1194  sudo net usershare info --long
+ 1195  ls /var/lib/samba/usershares
+ 1196  sudo ls /var/lib/samba/usershares
+ 1197  sudo apt install avahi-daemon
+ 1198  sudo systemctl enable --now avahi-daemon
+ 1199  sudo systemctl restart avahi-daemon smdb nmdb
+ 1200  ls -ld /home/milav
+ 1201  sudo nano /etc/samba/smb.conf
+ 1202  sudo systemctl restart smbd nmbd
+ 1203  sudo nano /etc/samba/smb.conf
+ 1204  ls -l Public/
+ 1205  cd Public/
+ 1206  rm dfs.docx 
+ 1207  ls -l
+ 1208  sudo nano /etc/samba/smb.conf
+ 1209  ls
+ 1210  cd ~
+ 1211  ls
+ 1212  mv Public/ Samba/Public
+ 1213  mv Public/ Samba/Public/
+ 1214  mkdir Samba
+ 1215  mv Public/ Samba/Public/
+ 1216  ls
+ 1217  ls -l
+ 1218  touch test
+ 1219  ls -l
+ 1220  cd Samba/
+ 1221  ls
+ 1222  rm Public/
+ 1223  rm -rf Public/
+ 1224  sudo rm -rf Public/
+ 1225  ls
+ 1226  mkdir Public
+ 1227  mkdir Public-RO
+ 1228  mkdir Private
+ 1229  ls -l
+ 1230  sudo systemctl restart smbd nmbd
+ 1231  cd ~
+ 1232  ls
+ 1233  cd Samba/
+ 1234  ls -l
+ 1235  ls -l Private/
+ 1236  ls -l Public
+ 1237  cd Samba/
+ 1238  ls -l Public
+ 1239  sudo nano /etc/samba/smb.conf
+ 1240  ls -l
+ 1241  cd ~
+ 1242  sudo chmod 777 -R Samba/
+ 1243  ls -l
+ 1244  ls -l Samba/
+ 1245  ls -l Samba/Public
+ 1246  sudo nano /etc/samba/smb.conf
+ 1247  ls -l Samba/Public
+ 1248  sudo systemctl restart smbd nmbd
+ 1249  ls -l Samba/Public
+ 1250  sudo nano /etc/samba/smb.conf
+ 1251  sudo systemctl restart smbd nmbd
+ 1252  ls -l Samba/Public
+ 1253  sudo nano /etc/samba/smb.conf
+ 1254  sudo systemctl restart smbd nmbd
+ 1255  ls -l Samba/Public
+ 1256  nano Samba/Public/test.txt 
+ 1257  sudo nano /etc/samba/smb.conf
+ 1258  sudo systemctl restart smbd nmbd
+ 1259  ls -l Samba/Public
+ 1260  nano Samba/Public/test.txt 
+ 1261  touch Samba/Public-RO/test.txt 
+ 1262  touch Samba/Private/
+ 1263  ls -l Samba/Private/
+ 1264  nano Samba/Private/test.java 
+ 1265  sudo nano /etc/samba/smb.conf
+ 1266  net usershare info --long
+ 1267  sudo net usershare info --long
+ 1268  sudo nano /etc/samba/smb.conf
+ 1269  sudo systemctl restart smbd
+ 1270  sudo nano /etc/samba/smb.conf
+ 1271  cd Samba/
+ 1272  ls
+ 1273  sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && sudo snap refresh -y
+ 1274  sudo reboot now
+ 1275  sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && sudo snap refresh -y
+ 1276  sudo reboot now
+ 1277  sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && sudo snap refresh -y
+ 1278  sudo do-release-upgrade
+ 1279  sudo apt install update-manager-core
+ 1280  sudo do-release-upgrade
+ 1281  sudo do-release-upgrade -d
+ 1282  sudo nano /etc/update-manager/release-upgrades
+ 1283  sudo do-release-upgrade
+ 1284  sudo do-release-upgrade -d
+ 1285  sudo nano /etc/samba/smb.conf
+ 1286  ls
+ 1287  ls -al
+ 1288  sudo nano /etc/samba/smb.conf
+ 1289  sudo do-release-upgrade -d
+ 1290  sudo do-release-upgrade
+ 1291  do-release-upgrade --help
+ 1292  screen
+ 1293  screen -r
+ 1294  screen
+ 1295  screen -r
+ 1296  sudo do-release-upgrade
+ 1297  sudo do-release-upgrade -d
+ 1298  sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && sudo snap refresh -y
+ 1299  sudo do-release-upgrade -d
+ 1300  sudo nano /etc/update-manager/release-upgrades
+ 1301  sudo do-release-upgrade -d
+ 1302  sudo do-release-upgrade
+ 1303  sudo nano /etc/nginx/sites-available/planetmilav.com 
+ 1304  sudo nano /etc/nginx/sites-available/roundcube 
+ 1305  sudo nano /etc/php/8.3/fpm/pool.d/www.conf 
+ 1306  sudo nano /etc/nginx/sites-available/roundcube 
+ 1307  sudo nano /etc/nginx/sites-available/planetmilav.com 
+ 1308  sudo nano /run/php/php-fpm.sock 
+ 1309  cat /run/php/php-fpm.sock 
+ 1310  sudo cat /run/php/php-fpm.sock 
+ 1311  sudo systemctl restart nginx.service php8.3-fpm.service 
+ 1312  sudo nano /etc/nginx/sites-available/planetmilav.com 
+ 1313  sudo systemctl restart nginx.service php8.3-fpm.service 
+ 1314  sudo nano /etc/nginx/sites-available/texeg.planetmilav.com 
+ 1315  sudo nano /etc/nginx/sites-available/planetmilav.com 
+ 1316  sudo nano /etc/nginx/sites-available/default 
+ 1317  sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && sudo snap refresh -y
+ 1318  python
+ 1319  crontab -e
+ 1320  python code/ipEmail/cloudflare-dns-update-api.py 
+ 1321  pip install python-dotenv
+ 1322  sudo apt install python-dotenv
+ 1323  sudo apt install python3-dotenv
+ 1324  python code/ipEmail/cloudflare-dns-update-api.py 
+ 1325  sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && sudo snap refresh -y
+ 1326  sudo crontab -e
+ 1327  certbot renew
+ 1328  sudo certbot renew
+ 1329  sudo systemctl stop nginx.service
+ 1330  sudo certbot renew
+ 1331  sudo ls /etc/letsencrypt/live/
+ 1332  sudo cat /etc/letsencrypt/live/
+ 1333  sudo cat /etc/letsencrypt/live/REAdME
+ 1334  sudo systemctl start nginx.service
+ 1335  sudo nano /etc/roundcube/config.inc.php 
+ 1336  echo "This is a test message" | mail -s "Test Subject" milav.dabgar@gmail.com
+ 1337  sudo cat /var/log/mail.log
+ 1338  sudo ufw status
+ 1339  ping gmail-smtp-in.l.google.com
+ 1340  history > bash_history.txt
+ 1341  cat bash_history.txt 
+ 1342  nano bash_history.txt `
+ 1343  nano bash_history.txt
+ 1344  echo $HISTSIZE
+ 1345  export HISTSIZE=10000
+ 1346  echo $HISTFILESIZE
+ 1347  export HISTFILESIZE=20000
+ 1348  source ~/.bashrc
+ 1349  rm bash_history.txt 
+ 1350  ls
+ 1351  history > bash_history.txt
+ 1352  cat bash_history.txt 
+ 1353  nano bash_history.txt 
+ 1354  cat bash_history.txt 
+ 1355  cd /etc/nginx/
+ 1356  ls
+ 1357  cd sites-available/
+ 1358  ls
+ 1359  cat planetmilav.com 
+ 1360  sudo nano /etc/netplan/00-installer-config.yaml
+ 1361  sudo nano /etc/netplan/50-cloud-init.yaml 
+ 1362  sudo nano /etc/samba/smb.conf
+ 1363  sudo nano /etc/nginx/sites-available/planetmilav.com 
+ 1364  sudo cat /etc/nginx/sites-available/planetmilav.com 
+ 1365  sudo nano /var/www/html/info.php
+ 1366  sudo systemctl restart nginx
+ 1367  sudo apt install php-fpm php-mysql php-curl php-gd php-intl php-mbstring php-soap php-xml php-xmlrpc php-zip
+ 1368  sudo nano /etc/nginx/sites-available/gppec
+ 1369  history > bash_history.txt
+ 1370  cat bash_history.txt 
+ 1371  sudo fdisk -l
+ 1372  sudo reboot now
+ 1373  lsusb
+ 1374  dmesg | grep usb
+ 1375  sudo dmesg | grep usb
+ 1376  sudo apt install usbutils
+ 1377  usb-devices
+ 1378  df -h
+ 1379  lsblk
+ 1380  lspci | grep USB
+ 1381  lsusb
+ 1382  sudo dmesg | grep 'power'
+ 1383  sudo nano /boot/firmware/config.txt
+ 1384  sudo reboot now
+ 1385  lsusb
+ 1386  lspci | grep USB
+ 1387  lsblk
+ 1388  lspci | grep USB
+ 1389  usb-devices
+ 1390  sudo fdisk -l
+ 1391  sudo dmesg | grep usb
+ 1392  sudo fdisk -l
+ 1393  sudo nano /boot/firmware/config.txt
+ 1394  sudo reboot now
+ 1395  sudo fdisk -l
+ 1396  sudo mount -a
+ 1397  sudo fdisk -l
+ 1398  df -h
+ 1399  sudo mount -a
+ 1400  df -h
+ 1401  sudo fdisk -l
+ 1402  sudo mount all
+ 1403  sudo mkdir /mnt/seagate
+ 1404  sudo mount /dev/sda1 /mnt/seagate/
+ 1405  cd /mnt/seagate/Images/Albums/
+ 1406  screen
+ 1407  screen -r
+ 1408  screen
+ 1409  screen -r
+ 1410  screen -r 2142
+ 1411  creen -r 2142
+ 1412  screen -r
+ 1413  screen -r 2437
+ 1414  screen -r
+ 1415  screen
+ 1416  for folder in */; do 7z a "${folder%/}.7z" "$folder" && rm -r "$folder"; done
+ 1417  sudo apt install p7zip-full 
+ 1418  for folder in */; do 7z a "${folder%/}.7z" "$folder" && rm -r "$folder"; done
+ 1419  cd /mnt/seagate/Images/Alien/Dates\ with\ Alien/
+ 1420  ls
+ 1421  for folder in */; do 7z a "${folder%/}.7z" "$folder" && rm -r "$folder"; done
+ 1422  ls
+ 1423  df -h
+ 1424  ls
+ 1425  screen -r
+ 1426  screen -r 2142
+ 1427  screen -r
+ 1428  sudo umount -a
+ 1429  df -h
+ 1430  sudo mount -a
+ 1431  df -h
+ 1432  sudo mount /dev/sda1 /mnt/seagate/
+ 1433  sudo fdisk -l
+ 1434  sudo reboot now
+ 1435  sudo fdisk -l
+ 1436  sudo mount /dev/sda1 /mnt/seagate/
+ 1437  screen
+ 1438  speedtest
+ 1439  sudo apt install speedtest-cli 
+ 1440  speedtest
+ 1441  sudo mount /dev/sda1 /mnt/seagate/
+ 1442  screen
+ 1443  screen -r
+ 1444  cd /mnt/seagate/Images/Alien/Dates\ with\ Alien/
+ 1445  for folder in */; do 7z a "${folder%/}.7z" "$folder" && rm -r "$folder"; done
+ 1446  ls
+ 1447  rm 202211\ -\ Atal\ Bridge\ \&\ Nami
+ 1448  ls
+ 1449  rm 202211\ -\ Atal\ Bridge\ \&\ Nami -rf
+ 1450  ls
+ 1451  cd ..
+ 1452  ls
+ 1453  cd Alien\ Shares/
+ 1454  ls
+ 1455  cd Alien\ Albums/
+ 1456  ls
+ 1457  for folder in */; do 7z a "${folder%/}.7z" "$folder" && rm -r "$folder"; done
+ 1458  ls
+ 1459  cd ..
+ 1460  ls
+ 1461  for folder in */; do 7z a "${folder%/}.7z" "$folder" && rm -r "$folder"; done
+ 1462  ls
+ 1463  cd ..
+ 1464  ls
+ 1465  cd ..
+ 1466  ls
+ 1467  cd Albums/
+ 1468  ls
+ 1469  cd ..
+ 1470  cd Shefali/
+ 1471  ls
+ 1472  cd Google\ Photos/
+ 1473  ls
+ 1474  for folder in */; do 7z a "${folder%/}.7z" "$folder" && rm -r "$folder"; done
+ 1475  ls
+ 1476  cd ~
+ 1477  sudo fdisk -l
+ 1478  sudo reboot now
+ 1479  sudo fdisk -l
+ 1480  sudo reboot now
+ 1481  sudo shutdown now
+ 1482  sudo fdisk -l
+ 1483  df -h
+ 1484  sudo mount /dev/sda1 /mnt/seagate/
+ 1485  df -h
+ 1486  sudo umount all
+ 1487  sudo umount --all
+ 1488  sudo mount --all
+ 1489  df -h
+ 1490  sudo mkdir wdmp5
+ 1491  sudo rm wdmp5/
+ 1492  sudo rm -r wdmp5/
+ 1493  ls
+ 1494  sudo mkdir /mnt/wdmp5
+ 1495  sudo mount /dev/sda1 /mnt/wdmp5/
+ 1496  df -h
+ 1497  screen
+ 1498  screen -r
+ 1499  ls /mnt/wdmp5/Videos/udacimakCourses/rendersCompleted/
+ 1500  ls -al
+ 1501  ls /mnt/wdmp5/Videos/udacimakCourses/rendersCompleted/ -al
+ 1502  screen -r
+ 1503  cd /mnt/wdmp5/Videos/udacimakCourses/rendersCompleted/
+ 1504  ls
+ 1505  for folder in */; do 7z a "${folder%/}.7z" "$folder" && rm -r "$folder"; done
+ 1506  sudo umount -a
+ 1507  sudo mount /dev/sda1 /mnt/wdmp5/
+ 1508  df -h
+ 1509  sudo mount -a
+ 1510  df -h
+ 1511  cd /mnt/wdmp5/Videos/udacimakCourses/rendersCompleted/
+ 1512  ls
+ 1513  screen
+ 1514  screen -r
+ 1515  for folder in */; do 7z a "${folder%/}.7z" "$folder" && rm -r "$folder"; done
+ 1516  ls
+ 1517  cd /mnt/wdmp5/Videos/
+ 1518  ls
+ 1519  udemy/
+ 1520  cd udemy/
+ 1521  ls
+ 1522  for folder in */; do 7z a "${folder%/}.7z" "$folder" && rm -r "$folder"; done
+ 1523  sudo umount -a
+ 1524  sudo mount /dev/sda1 /mnt/wdmp5/
+ 1525  df -h
+ 1526  cd /mnt/wdmp5/Videos/udemy/
+ 1527  ls
+ 1528  cd ..
+ 1529  ls
+ 1530  cd udacimakCourses/
+ 1531  ls
+ 1532  rendersCompleted/
+ 1533  ls
+ 1534  cd rendersCompleted/
+ 1535  ls
+ 1536  cd /mnt/wdmp5/Videos/
+ 1537  ls
+ 1538  cd NPTEL/
+ 1539  ls
+ 1540  cd udacimakCourses/
+ 1541  screen
+ 1542  screen -r
+ 1543  cd /mnt/wdmp5/Videos/NPTEL/
+ 1544  ls
+ 1545  screen -r
+ 1546  cd /mnt/wdmp5/Videos/NPTEL/
+ 1547  ls
+ 1548  screen -r
+ 1549  screen
+ 1550  screen -r
+ 1551  cd /mnt/wdmp5/Videos/udemy/
+ 1552  ls
+ 1553  screen -r
+ 1554  ls /mnt/wdmp5/Videos/edX/edxCourses/
+ 1555  ls /mnt/wdmp5/Videos/edX/edxCoursesCompleted/
+ 1556  ls /mnt/wdmp5/Videos/edX/edxCoursesFailed/
+ 1557  ls /mnt/wdmp5/Videos/edX/edxProgramsCompleted/18.01x\ Single\ Variable\ Calculus/
+ 1558  ls /mnt/wdmp5/Videos/edX/edxProgramsCompleted/Professional\ Certificate\ in\ Deep\ Learning\ IBM/
+ 1559  ls /mnt/wdmp5/Videos/edX/edxProgramsCompleted/Software\ Development/
+ 1560  ls /mnt/wdmp5/Videos/Lynda/
+ 1561  ls /mnt/wdmp5/Videos/NPTEL/
+ 1562  ls /mnt/wdmp5/Videos/udacimakCourses/rendersCompleted/
+ 1563  sudo cp /mnt/wdmp5/Videos/udacimakCourses/rendersCompleted/Android\ Basics\ Networking\ v1.0.0/ /mnt/wdmp5/Videos/udacimakCourses/rendersCompleted/Android\ Basics\ Networking\ v1.0.1/
+ 1564  cp /mnt/wdmp5/Videos/udacimakCourses/rendersCompleted/Android\ Basics\ Networking\ v1.0.0/ /mnt/wdmp5/Videos/udacimakCourses/rendersCompleted/Android\ Basics\ Networking\ v1.0.1/ -r
+ 1565  ls
+ 1566  ls /mnt/wdmp5/Videos/udacimakCourses/rendersCompleted/
+ 1567  rm /mnt/wdmp5/Videos/udacimakCourses/rendersCompleted/Android\ Basics\ Networking\ v1.0.0/ 
+ 1568  rm /mnt/wdmp5/Videos/udacimakCourses/rendersCompleted/Android\ Basics\ Networking\ v1.0.0/ -r
+ 1569  screen -r
+ 1570  ls /mnt/wdmp5/Videos/udemy/
+ 1571  screen -r
+ 1572  ls
+ 1573  for folder in */; do 7z a "${folder%/}.7z" "$folder" && rm -r "$folder"; done
+ 1574  ls
+ 1575  rm 60346.7z
+ 1576  ls
+ 1577  rm 719318.7z 
+ 1578  rm 751094.7z 
+ 1579  rm 915690.7z 
+ 1580  ls
+ 1581  for folder in */; do 7z a "${folder%/}.7z" "$folder" && rm -r "$folder"; done
+ 1582  ls
+ 1583  cd ..
+ 1584  ls
+ 1585  cd edX/
+ 1586  ls
+ 1587  cd edxProgramsCompleted/
+ 1588  ls
+ 1589  for folder in */; do 7z a "${folder%/}.7z" "$folder" && rm -r "$folder"; done
+ 1590  cd 18.01x\ Single\ Variable\ Calculus/
+ 1591  ls
+ 1592  cd ..
+ 1593  ls
+ 1594  cd ..
+ 1595  ls
+ 1596  cd edxCoursesFailed/
+ 1597  ls
+ 1598  cd ../edxCoursesCompleted/
+ 1599  ls
+ 1600  for folder in */; do 7z a "${folder%/}.7z" "$folder" && rm -r "$folder"; done
+ 1601  ls
+ 1602  cd ..
+ 1603  ls
+ 1604  cd edxCoursesFailed/
+ 1605  ls
+ 1606  for folder in */; do 7z a "${folder%/}.7z" "$folder" && rm -r "$folder"; done
+ 1607  ls
+ 1608  cd ..
+ 1609  ls
+ 1610  cd edxCourses/
+ 1611  ls
+ 1612  for folder in */; do 7z a "${folder%/}.7z" "$folder" && rm -r "$folder"; done
+ 1613  ls
+ 1614  cd ../edxProgramsCompleted/
+ 1615  ls
+ 1616  cd 18.01x\ Single\ Variable\ Calculus/
+ 1617  ls
+ 1618  for folder in */; do 7z a "${folder%/}.7z" "$folder" && rm -r "$folder"; done
+ 1619  cd ..
+ 1620  ls
+ 1621  cd Software\ Development/
+ 1622  ls
+ 1623  for folder in */; do 7z a "${folder%/}.7z" "$folder" && rm -r "$folder"; done
+ 1624  ls
+ 1625  cd ..
+ 1626  ls
+ 1627  cd Professional\ Certificate\ in\ Deep\ Learning\ IBM/
+ 1628  ls
+ 1629  for folder in */; do 7z a "${folder%/}.7z" "$folder" && rm -r "$folder"; done
+ 1630  ls
+ 1631  cd ..
+ 1632  ls
+ 1633  cd ..
+ 1634  ls
+ 1635  cd edxCourses/
+ 1636  ls
+ 1637  cd ../edxCoursesCompleted/
+ 1638  ls
+ 1639  for folder in */; do 7z a "${folder%/}.7z" "$folder" && rm -r "$folder"; done
+ 1640  ls
+ 1641  cp Creating_Virtual_Reality_VR_Apps/ Creating_Virtual_Reality_VR_Apps2/
+ 1642  cp Creating_Virtual_Reality_VR_Apps/ Creating_Virtual_Reality_VR_Apps2/ -r
+ 1643  ls
+ 1644  sudo rm -rf Creating_Virtual_Reality_VR_Apps/
+ 1645  ls
+ 1646  cp --help
+ 1647  ls
+ 1648  cp Introduction_to_Computer_Science_and_Programming_Using_Python/ Introduction_to_Computer_Science_and_Programming_Using_Python2/ -r
+ 1649  ls
+ 1650  sudo rm -rf Introduction_to_Computer_Science_and_Programming_Using_Python/
+ 1651  ls
+ 1652  mv Creating_Virtual_Reality_VR_Apps2/ Creating_Virtual_Reality_VR_Apps/
+ 1653  ls
+ 1654  mv Introduction_to_Computer_Science_and_Programming_Using_Python2/ Introduction_to_Computer_Science_and_Programming_Using_Python/ 
+ 1655  ls
+ 1656  for folder in */; do 7z a "${folder%/}.7z" "$folder" && rm -r "$folder"; done
+ 1657  ls
+ 1658  cd /mnt/wdmp5/Videos/udacimakCourses/rendersCompleted/
+ 1659  ls
+ 1660  mv Android\ Basics\ Networking\ v1.0.1/ Android\ Basics\ Networking\ v1.0.0/
+ 1661  ls
+ 1662  for folder in */; do 7z a "${folder%/}.7z" "$folder" && rm -r "$folder"; done
+ 1663  ls
+ 1664  sudo mount /dev/sda1 /mnt/wdmp5/
+ 1665  df -h
+ 1666  cd /mnt/wdmp5/Videos/udemy/
+ 1667  screen
+ 1668  ls /mnt/wdmp5/Videos/youtube/
+ 1669  screen -r
+ 1670  ls
+ 1671  rm test mbox 
+ 1672  ls
+ 1673  ls /mnt/wdmp5/Videos/
+ 1674  screen -r
+ 1675  sudo umount -a
+ 1676  sudo shutdown now
+ 1677  sudo mount /dev/sda1 /mnt/wdmp5/
+ 1678  df -h
+ 1679  ls /mnt/wdmp5/Videos/coursera/specialization/instructors/jhu/
+ 1680  screen
+ 1681  screen -r
+ 1682  screen
+ 1683  sudo mount /dev/sda1 /mnt/wdmp5/
+ 1684  cd /mnt/wdmp5/Videos/coursera/specialization/instructors/jhu/
+ 1685  cd ..
+ 1686  ls
+ 1687  ls gcp
+ 1688  ls colora
+ 1689  ls colorado/
+ 1690  ls ibm
+ 1691  ls irvine/
+ 1692  cd irvine/
+ 1693  screen
+ 1694  screen -r
+ 1695  ifconfig
+ 1696  df-h
+ 1697  df -h
+ 1698  ifconfig
+ 1699  sudo nano /etc/samba/smb.conf
+ 1700  samba status
+ 1701  sudo samba status
+ 1702  samba --help
+ 1703  smbclient -k -L localhost
+ 1704  smbstatus 
+ 1705  sudo smbstatus 
+ 1706  smbclient -k -L host_name
+ 1707  smbclient -L localhost
+ 1708  smbclient -L 192.168.0.50
+ 1709  sudo nano /etc/samba/smb.conf
+ 1710  speedtest
+ 1711  sudo reboot now
+ 1712  speedtest
+ 1713  sudo apt install speedtest
+ 1714  curl -s https://packagecloud.io/install/repositories/ookla/speedtest-cli/script.deb.sh | sudo bashcurl -s https://packagecloud.io/install/repositories/ookla/speedtest-cli/script.deb.sh | sudo bash
+ 1715  lssudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
+ 1716  screen
+ 1717  sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
+ 1718  sudo dpkg --configure -a
+ 1719  sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
+ 1720  screen -r
+ 1721  sudo reboot now
+ 1722  echo "This is a test message" | mail -s "Test Subject" milav.dabgar@gmail.com
+ 1723  sudo crontab -e
+ 1724  crontab -e
+ 1725  certbot --help
+ 1726  certbot renew
+ 1727  sudo certbot renew
+ 1728  sudo apt-get install python3-certbot-nginx
+ 1729  sudo certbot renew --nginx
+ 1730  sudo certbot --nginx -d planetmilav.com
+ 1731  echo "This is a test message" | mail -s "Test Subject" milav.dabgar@gmail.com
+ 1732  sudo reboot now
+ 1733  sudo crontab -e
+ 1734  certbot renew --nginx
+ 1735  sudo crontab -e
+ 1736  sudo tail -f /var/log/mail.log
+ 1737  sudo cat /var/log/mail.log
+ 1738  telnet gmail-smtp-in.l.google.com 25
+ 1739  sudo cat /var/log/mail.log
+ 1740  sudo nano /etc/postfix/main.cf
+ 1741  sudo ufw status
+ 1742  telnet smtp.gmail.com 587
+ 1743  telnet smtp.gmail.com 25
+ 1744  sudo postconf -n
+ 1745  sudo nano /var/log/mail.log
+ 1746  sudo cat /var/log/mail.log
+ 1747  sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
+ 1748  sudo reboot now
+ 1749  certbot renew --nginx
+ 1750  sudo crontab -e
+ 1751  sudo certbot renew --nginx
+ 1752  ping google.com
+ 1753  sudo reboot now
+ 1754  ifconfig
+ 1755  sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
+ 1756  ls
+ 1757  cd code/
+ 1758  ls
+ 1759  cd ipEmail/
+ 1760  ls
+ 1761  sudo crontab -e
+ 1762  crontab -e
+ 1763  python cloudflare-dns-update-api.py 
+ 1764  ls
+ 1765  screen
+ 1766  sudo do-release-upgrade 
+ 1767  screen
+ 1768  screen -d
+ 1769  screen -r
+ 1770  sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
+ 1771  sudo dpkg --configure -a
+ 1772  screen -r
+ 1773  sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
+ 1774  screen
+ 1775  sudo dpkg --configure -a
+ 1776  sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
+ 1777  screen -r
+ 1778  ifconfig
+ 1779  sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
+ 1780  screen 
+ 1781  sudo nano /etc/nginx/sites-available/planetmilav.com 
+ 1782  sudo nano /etc/letsencrypt/live/
+ 1783  sudo cat /etc/letsencrypt/live/
+ 1784  sudo ls /etc/letsencrypt/live/
+ 1785  sudo nginx -t
+ 1786  sudo certbot certificates
+ 1787  sudo nano /etc/nginx/sites-available/roundcube 
+ 1788  sudo ls /etc/letsencrypt/live/
+ 1789  sudo nano /etc/nginx/sites-available/planetmilav.com 
+ 1790  sudo cat /etc/letsencrypt/live/
+ 1791  sudo ls /etc/letsencrypt/live/
+ 1792  sudo ls /etc/letsencrypt/live/planetmilav.com/
+ 1793  sudo ls /etc/letsencrypt/live/planetmilav.com/fullchain.pem
+ 1794  sudo cat /etc/letsencrypt/live/planetmilav.com/fullchain.pem
+ 1795  sudo certbot certificates
+ 1796  sudo nano /etc/nginx/sites-available/planetmilav.com 
+ 1797  sudo systemctl reload nginx
+ 1798  sudo certbot delete --cert-name planetmilav.com-0001
+ 1799  sudo certbot delete --cert-name planetmilav.com-0002
+ 1800  sudo certbot certificates
+ 1801  crontab -e
+ 1802  sudo crontab -e
+ 1803  sudo certbot renew --nginx
+ 1804  sudo certbot delete --cert-name planetmilav.com
+ 1805  sudo certbot certificates
+ 1806  sudo certbot --nginx -d planetmilav.com -d www.planetmilav.com -d gpplmsv1.planetmilav.com -d mail.planetmilav.com -d portfolio.planetmilav.com -d postfixadmin.planetmilav.com -d texeg.planetmilav.com -d portfolio.planetmilav.com -d texeg.planetmilav.com roundcube.planetmilav.com nextcloud.planetmilav.com
+ 1807  sudo certbot --nginx -d planetmilav.com -d www.planetmilav.com -d gpplmsv1.planetmilav.com -d mail.planetmilav.com -d portfolio.planetmilav.com -d postfixadmin.planetmilav.com -d texeg.planetmilav.com -d portfolio.planetmilav.com -d texeg.planetmilav.com -d roundcube.planetmilav.com -d nextcloud.planetmilav.com
+ 1808  sudo nginx -t
+ 1809  sudo nano /etc/nginx/sites-available/planetmilav.com 
+ 1810  sudo nginx -t
+ 1811  sudo certbot --nginx -d planetmilav.com -d www.planetmilav.com -d gpplmsv1.planetmilav.com -d mail.planetmilav.com -d portfolio.planetmilav.com -d postfixadmin.planetmilav.com -d texeg.planetmilav.com -d portfolio.planetmilav.com -d texeg.planetmilav.com -d roundcube.planetmilav.com -d nextcloud.planetmilav.com
+ 1812  sudo systemctl reload nginx
+ 1813  sudo certbot delete --cert-name planetmilav.com
+ 1814  sudo nano /etc/nginx/sites-available/planetmilav.com 
+ 1815  sudo certbot certificates
+ 1816  sudo nano /etc/nginx/sites-available/default 
+ 1817  sudo systemctl reload nginx
+ 1818  sudo systemctl start nginx
+ 1819  sudo nginx -t
+ 1820  sudo reboot now
+ 1821  sudo nginx -t
+ 1822  sudo nano /etc/nginx/sites-available/default 
+ 1823  sudo nano /etc/nginx/sites-available/planetmilav.com 
+ 1824  sudo nano /etc/nginx/sites-available/gpplmsv1.planetmilav.com 
+ 1825  sudo nano /etc/nginx/sites-enabled/gpplmsv1.planetmilav.com 
+ 1826  sudo nano /etc/nginx/sites-enabled/planetmilav.com 
+ 1827  sudo nano /etc/nginx/sites-enabled/default 
+ 1828  sudo nano /etc/nginx/sites-enabled/portfolio.planetmilav.com 
+ 1829  sudo nano /etc/nginx/sites-enabled/postfixadmin.planetmilav.com 
+ 1830  sudo nano /etc/nginx/sites-available/postfixadmin.planetmilav.com 
+ 1831  sudo nginx -t
+ 1832  sudo certbot certificates
+ 1833  sudo certbot --nginx -d planetmilav.com -d www.planetmilav.com
+ 1834  sudo nano /etc/nginx/sites-enabled/portfolio.planetmilav.com 
+ 1835  sudo nano /etc/nginx/sites-enabled/texeg.planetmilav.com
+ 1836  sudo nano /etc/nginx/sites-available/postfixadmin.planetmilav.com
+ 1837  sudo nano /etc/nginx/sites-available/roundcube.planetmilav.com
+ 1838  sudo nano /etc/nginx/sites-available/roundcube
+ 1839  sudo nginx -t
+ 1840  sudo certbot --nginx -d planetmilav.com -d www.planetmilav.com
+ 1841  sudo certbot certificates
+ 1842  sudo certbot --nginx -d planetmilav.com -d www.planetmilav.com -d postfixadmin.planetmilav.com
+ 1843  sudo nano /etc/nginx/sites-available/postfixadmin.planetmilav.com
+ 1844  sudo systemctl reload nginx
+ 1845  sudo systemctl start nginx
+ 1846  sudo nginx -t
+ 1847  sudo systemctl status nginx
+ 1848  sudo nano /etc/nginx/sites-available/planetmilav.com 
+ 1849  sudo nano /etc/nginx/sites-available/postfixadmin.planetmilav.com 
+ 1850  sudo nano /etc/nginx/sites-available/planetmilav.com 
+ 1851  sudo nginx -t
+ 1852  sudo systemctl status nginx
+ 1853  sudo nginx -t
+ 1854  sudo nano /etc/nginx/sites-available/postfixadmin.planetmilav.com 
+ 1855  sudo nano /etc/nginx/sites-available/roundcube 
+ 1856  sudo certbot --nginx -d planetmilav.com -d www.planetmilav.com -d gpplmsv1.planetmilav.com -d mail.planetmilav.com -d portfolio.planetmilav.com -d postfixadmin.planetmilav.com -d texeg.planetmilav.com -d roundcube.planetmilav.com -d nextcloud.planetmilav.com
+ 1857  sudo nano /etc/nginx/sites-available/roundcube 
+ 1858  sudo cp /etc/nginx/sites-available/roundcube /etc/nginx/sites-available/nextcloud
+ 1859  sudo nano /etc/nginx/sites-available/nextcloud 
+ 1860  sudo nginx -t
+ 1861  sudo systemctl reload nginx
+ 1862  sudo certbot --nginx -d planetmilav.com -d www.planetmilav.com -d gpplmsv1.planetmilav.com -d mail.planetmilav.com -d portfolio.planetmilav.com -d postfixadmin.planetmilav.com -d texeg.planetmilav.com -d roundcube.planetmilav.com -d nextcloud.planetmilav.com
+ 1863  sudo certbot certificates
+ 1864  sudo nano /etc/nginx/sites-available/roundcube 
+ 1865  sudo nano /etc/nginx/sites-available/default 
+ 1866  sudo nano /etc/nginx/sites-available/postfixadmin.planetmilav.com 
+ 1867  sudo nano /etc/nginx/sites-available/texeg.planetmilav.com 
+ 1868  sudo nano /etc/nginx/sites-available/roundcube 
+ 1869  sudo nano /etc/nginx/sites-available/default 
+ 1870  sudo nginx -t
+ 1871  sudo systemctl reload nginx
+ 1872  sudo systemctl start nginx
+ 1873  sudo systemctl status nginx
+ 1874  sudo systemctl stop nginx
+ 1875  sudo systemctl status nginx
+ 1876  sudo systemctl reload nginx
+ 1877  sudo systemctl start nginx
+ 1878  sudo systemctl status nginx
+ 1879  sudo lsof -i :80
+ 1880  sudo lsof -i :443
+ 1881  sudo systemctl stop apache2
+ 1882  sudo lsof -i :443
+ 1883  sudo lsof -i :80
+ 1884  sudo systemctl status nginx
+ 1885  sudo systemctl start nginx
+ 1886  sudo systemctl status nginx
+ 1887  sudo systemctl stop nginx
+ 1888  sudo pkill -f nginx
+ 1889  sudo lsof -i :80
+ 1890  sudo lsof -i :443
+ 1891  sudo systemctl start nginx
+ 1892  sudo systemctl status nginx
+ 1893  sudo systemctl stop nginx
+ 1894  sudo systemctl status nginx
+ 1895  sudo pkill -f nginx
+ 1896  sudo systemctl status nginx
+ 1897  sudo lsof -i :443
+ 1898  sudo nginx -t
+ 1899  sudo certbot --nginx -d planetmilav.com -d www.planetmilav.com -d gpplmsv1.planetmilav.com -d mail.planetmilav.com -d portfolio.planetmilav.com -d postfixadmin.planetmilav.com -d texeg.planetmilav.com -d roundcube.planetmilav.com -d nextcloud.planetmilav.com
+ 1900  sudo lsof -i :443
+ 1901  sudo nano /etc/nginx/sites-available/roundcube 
+ 1902  sudo nano /etc/nginx/sites-available/postfixadmin.planetmilav.com 
+ 1903  sudo nano /etc/nginx/sites-available/texeg.planetmilav.com 
+ 1904  sudo certbot delete --cert-name texeg.planetmilav.com
+ 1905  sudo certbot delete --cert-name postfixadmin.planetmilav.com
+ 1906  sudo nano /etc/nginx/sites-available/gpplmsv1.planetmilav.com
+ 1907  sudo nano /etc/nginx/sites-available/portfolio.planetmilav.com
+ 1908  sudo certbot delete --cert-name portfolio.planetmilav.com
+ 1909  sudo certbot certificates
+ 1910  sudo nano /etc/nginx/sites-available/roundcube.planetmilav.com 
+ 1911  sudo nano /etc/nginx/sites-available/roundcube
+ 1912  sudo certbot delete --cert-name roundcube.planetmilav.com
+ 1913  sudo certbot certificates
+ 1914  sudo nano /etc/nginx/sites-available/roundcube
+ 1915  sudo nano /etc/nginx/sites-available/portfolio.planetmilav.com 
+ 1916  sudo nano /etc/nginx/sites-available/gpplmsv1.planetmilav.com
+ 1917  sudo nano /etc/nginx/sites-available/default 
+ 1918  sudo nginx -t
+ 1919  sudo reboot now
+ 1920  sudo nginx -t
+ 1921  sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
+ 1922  sudo reboot now
+ 1923  nano export_bash_history.sh
+ 1924  chmod +x export_bash_history.sh
+ 1925  ./export_bash_history.sh
+ 1926  cat bash_history_with_dirs.txt
+ 1927  ls
+ 1928  cat bash_history.txt 
+ 1929  nano export_history.sh
+ 1930  chmod +x export_history.sh
+ 1931  ./export_history.sh
+ 1932  cat bash_history_with_dirs.txt
+ 1933  nano bash_history_with_dirs.txt
+ 1934  history > 243110_bash_history.txt
+ 1935  nano 243110_bash_history.txt
+ 1936  nano ~/.bashrc
+ 1937  history > 243110_bash_history.txt
+
+

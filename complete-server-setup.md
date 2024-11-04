@@ -126,35 +126,50 @@ Create Nginx configurations:
 
 1. `/etc/nginx/sites-available/planetmilav.com`:
 ```nginx
+# Upstream to abstract backend connection(s) for php
 upstream php {
-    server unix:/run/php/php-fpm.sock;
+  server unix:/run/php/php-fpm.sock;
 }
 
 server {
-    server_name planetmilav.com www.planetmilav.com;
-    root /var/www/planetmilav.com;
-    index index.php;
+  server_name planetmilav.com www.planetmilav.com;
+  root /var/www/planetmilav.com;
+  index index.php;
 
-    location = /favicon.ico {
-        log_not_found off;
-        access_log off;
-    }
+  location = /favicon.ico {
+      log_not_found off;
+      access_log off;
+  }
 
-    location / {
-        try_files $uri $uri/ /index.php?$args;
-    }
+  location = /robots.txt {
+      allow all;
+      log_not_found off;
+      access_log off;
+  }
 
-    location ~ \.php$ {
-        include fastcgi_params;
-        fastcgi_intercept_errors on;
-        fastcgi_pass php;
-        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
-    }
+  location / {
+      try_files $uri $uri/ /index.php?$args;
+  }
 
-    location ~* \.(js|css|png|jpg|jpeg|gif|ico)$ {
-        expires max;
-        log_not_found off;
-    }
+  location ~ \.php$ {
+      include fastcgi_params;
+      fastcgi_intercept_errors on;
+      fastcgi_pass php;
+      fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+  }
+
+  location ~* \.(js|css|png|jpg|jpeg|gif|ico)$ {
+      expires max;
+      log_not_found off;
+  }
+
+  location ~ /\.ht {
+      deny all;
+  }
+
+  # Gzip config
+  gzip on;
+  gzip_types text/plain text/xml text/css application/javascript;
 }
 ```
 
@@ -213,6 +228,7 @@ sudo ln -s /etc/nginx/sites-available/texeg.planetmilav.com /etc/nginx/sites-ena
 sudo ln -s /etc/nginx/sites-available/portfolio.planetmilav.com /etc/nginx/sites-enabled/
 sudo ln -s /etc/nginx/sites-available/gpplmsv1.planetmilav.com /etc/nginx/sites-enabled/
 sudo nginx -t
+sudo systemctl restart nginx
 ```
 
 ## 8. SSL Certificate Setup

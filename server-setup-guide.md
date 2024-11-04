@@ -56,7 +56,6 @@ sudo apt install mariadb-server mariadb-client -y
 sudo mysql_secure_installation
 sudo mysql -u root -p
 sudo mysql -e "CREATE DATABASE planetmilav_com;"
-sudo mysql -u root -p
 sudo mysql -e "CREATE DATABASE texeg_planetmilav_com;"
 sudo mysql -e "CREATE USER 'wordpress'@'localhost' IDENTIFIED BY 'seagate';"
 sudo mysql -e "GRANT ALL PRIVILEGES ON planetmilav_com.* TO 'wordpress'@'localhost';"
@@ -90,6 +89,7 @@ sudo ln -s /etc/nginx/sites-available/roundcube /etc/nginx/sites-enabled/
 sudo ln -s /etc/nginx/sites-available/nextcloud /etc/nginx/sites-enabled/
 
 sudo nginx -t
+sudo systemctl restart nginx
 ```
 
 ## 8. SSL Certificate Setup

@@ -1,0 +1,6 @@
+- exclude: /home/milav/code/gppLMSv2/frontend/node_modules/
+- exclude: /home/milav/code/gppLMSv2/backend/.venv/
+- exclude: /home/milav/code/gppLMSv2/backend/app/utilities/
+- exclude_ext: .pyc
+- include_ext: .py .js .vue .html .css .sh
+- /home/milav/code/gppLMSv2/
